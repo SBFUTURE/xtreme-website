@@ -20,7 +20,7 @@
           </p>
           <div class="flex space-x-4">
             <!-- Social Media Links -->
-            <a href="https://www.facebook.com/xtremelonice" target="_blank" rel="noopener noreferrer" 
+            <a href="https://www.facebook.com/xtremeonice" target="_blank" rel="noopener noreferrer" 
                class="text-gray-400 hover:text-xtreme-yellow transition-colors duration-300">
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -38,7 +38,7 @@
                 <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
               </svg>
             </a>
-            <a href="https://www.youtube.com/@xtremeonice" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.youtube.com/@xtremeoniceliedekerke3232" target="_blank" rel="noopener noreferrer"
                class="text-gray-400 hover:text-xtreme-yellow transition-colors duration-300">
               <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
@@ -96,7 +96,7 @@
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
               </svg>
               <a href="tel:+32123456789" class="text-gray-300 hover:text-xtreme-yellow transition-colors duration-300 text-sm">
-                +32 123 456 789
+                +32 471 82 31 42
               </a>
             </div>
             <div class="flex items-center">

@@ -48,7 +48,7 @@
             <h3 class="text-xl font-heading font-bold mb-2 text-xtreme-yellow">Instagram</h3>
             <p class="text-gray-300 mb-4">Bekijk onze foto's en stories</p>
             <a 
-              href="https://instagram.com/xtremeonice" 
+              href="https://www.instagram.com/xtreme_on_ice/" 
               target="_blank" 
               class="inline-block bg-gradient-to-r from-[#E4405F] to-[#F77737] text-white px-6 py-2 rounded-lg hover:from-[#D63384] hover:to-[#E4405F] transition-colors"
             >
@@ -66,7 +66,7 @@
             <h3 class="text-xl font-heading font-bold mb-2 text-xtreme-yellow">TikTok</h3>
             <p class="text-gray-300 mb-4">Korte video's van onze trainingen</p>
             <a 
-              href="https://tiktok.com/@xtremeonice" 
+              href="https://www.tiktok.com/@xtreme_on_ice" 
               target="_blank" 
               class="inline-block bg-[#000000] text-white px-6 py-2 rounded-lg hover:bg-[#333333] transition-colors"
             >
@@ -84,7 +84,7 @@
             <h3 class="text-xl font-heading font-bold mb-2 text-xtreme-yellow">YouTube</h3>
             <p class="text-gray-300 mb-4">Training video's en tutorials</p>
             <a 
-              href="https://youtube.com/@xtremeonice" 
+              href="https://www.youtube.com/@xtremeoniceliedekerke3232" 
               target="_blank" 
               class="inline-block bg-[#FF0000] text-white px-6 py-2 rounded-lg hover:bg-[#CC0000] transition-colors"
             >
@@ -102,10 +102,10 @@
             <h3 class="text-xl font-heading font-bold mb-2 text-xtreme-yellow">Telefoon</h3>
             <p class="text-gray-300 mb-4">Bel ons voor vragen</p>
             <a 
-              href="tel:+32123456789" 
+              href="tel:+32471823142" 
               class="inline-block bg-xtreme-yellow text-xtreme-black font-bold px-6 py-2 rounded-lg hover:bg-xtreme-light-yellow transition-colors"
             >
-              +32 12 34 56 789
+             +32 471 82 31 42
             </a>
           </div>
 
