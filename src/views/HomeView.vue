@@ -129,11 +129,11 @@
 
         <div class="max-w-2xl mx-auto">
           <div class="gallery-item group">
-            <div class="relative overflow-hidden rounded-xl">
+            <div class="relative overflow-hidden rounded-xl bg-black">
               <img 
                 src="@/assets/Images/Event/IMG_4086.JPG" 
                 alt="Xtreme On Ice evenement" 
-                class="w-full h-96 object-cover transition-transform duration-300 group-hover:scale-110"
+                class="w-full h-auto min-h-[500px] max-h-[600px] object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
               <div class="absolute bottom-6 left-6 text-white">
@@ -209,11 +209,10 @@ export default {
 
 .text-shadow-ice {
   text-shadow: 
-    0 0 15px rgba(255, 237, 78, 1),
-    0 0 30px rgba(255, 237, 78, 0.8),
-    0 0 45px rgba(255, 237, 78, 0.6),
-    3px 3px 6px rgba(0, 0, 0, 0.9),
-    -1px -1px 2px rgba(0, 0, 0, 0.8);
+    0 0 10px rgba(255, 237, 78, 0.8),
+    0 0 20px rgba(255, 237, 78, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.6),
+    -1px -1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary {

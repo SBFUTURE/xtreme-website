@@ -3,7 +3,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <!-- Logo Section -->
-        <div class="flex items-center space-x-4">
+        <router-link to="/" class="flex items-center space-x-4 hover:opacity-80 transition-opacity duration-300">
           <div class="flex-shrink-0">
             <img 
               src="@/assets/Images/XtremeLogo.jpg" 
@@ -19,7 +19,7 @@
               Ijsvereniging - België
             </p>
           </div>
-        </div>
+        </router-link>
 
         <!-- Desktop Navigation -->
         <div class="hidden md:block">
@@ -49,6 +49,15 @@
                 active-class="text-xtreme-yellow border-b-2 border-xtreme-yellow"
               >
                 Evenementen
+              </router-link>
+            </li>
+            <li>
+              <router-link 
+                to="/trainingskalender" 
+                class="nav-link text-frost-white hover:text-xtreme-yellow transition-all duration-300 font-heading font-medium text-lg tracking-wide"
+                active-class="text-xtreme-yellow border-b-2 border-xtreme-yellow"
+              >
+                Trainingskalender
               </router-link>
             </li>
             <li>
@@ -108,6 +117,16 @@
               active-class="text-xtreme-yellow bg-xtreme-dark"
             >
               Evenementen
+            </router-link>
+          </li>
+          <li>
+            <router-link 
+              to="/trainingsschema" 
+              @click="closeMobileMenu"
+              class="block px-3 py-2 text-frost-white hover:text-xtreme-yellow hover:bg-xtreme-dark rounded-md transition-all duration-300 font-heading tracking-wide"
+              active-class="text-xtreme-yellow bg-xtreme-dark"
+            >
+              Trainingsschema
             </router-link>
           </li>
           <li>
