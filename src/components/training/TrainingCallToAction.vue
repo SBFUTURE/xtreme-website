@@ -11,7 +11,7 @@
         to="/contact"
         class="inline-block px-6 py-3 bg-yellow-gradient text-black font-heading font-bold rounded-lg hover:shadow-ice transition-all duration-300 uppercase tracking-wide"
       >
-        Meer Info
+        Schrijf je in
       </router-link>
     </div>
   </div>

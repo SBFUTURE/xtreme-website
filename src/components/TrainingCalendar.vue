@@ -1,5 +1,5 @@
 <template>
-  <div class="training-calendar bg-ice-gradient p-8 rounded-xl">
+  <div class="training-calendar bg-ice-gradient rounded-xl">
     <!-- Header -->
     <TrainingCalendarHeader />
 
