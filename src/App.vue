@@ -1,11 +1,15 @@
 <script setup>
 import Nav from './components/Nav.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <div id="app" class="min-h-screen">
+  <div id="app" class="min-h-screen flex flex-col">
     <Nav />
-    <router-view />
+    <main class="flex-grow">
+      <router-view />
+    </main>
+    <Footer />
   </div>
 </template>
 
