@@ -5,6 +5,10 @@
       <span class="text-gray-200 font-medium">Training</span>
     </div>
     <div class="flex items-center gap-2">
+      <div class="w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+      <span class="text-gray-200 font-medium">Xtreme Night</span>
+    </div>
+    <div class="flex items-center gap-2">
       <div class="w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></div>
       <span class="text-gray-200 font-medium">Evenement</span>
     </div>

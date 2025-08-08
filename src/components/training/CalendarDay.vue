@@ -18,13 +18,11 @@
            :key="training.date"
            :class="[
              'text-xs px-1 py-0.5 rounded text-black font-medium truncate',
-             training.title === 'Evenement' 
-               ? 'bg-gradient-to-r from-yellow-400 to-orange-400' 
-               : 'bg-xtreme-yellow'
+             getEventClass(training.title)
            ]"
            :title="`${training.title} - ${training.time}${training.note ? ' - ' + training.note : ''}`">
         {{ training.time.split('-')[0] }}
-        {{ training.title === 'Evenement' ? '🎉' : '⛸️' }}
+        {{ getEventIcon(training.title) }}
       </div>
     </div>
   </div>
@@ -45,9 +43,33 @@ export default {
   setup() {
     const { isToday, isPastDay } = useCalendarHelpers()
 
+    const getEventClass = (title) => {
+      switch (title) {
+        case 'Xtreme Night':
+          return 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
+        case 'Evenement':
+          return 'bg-gradient-to-r from-yellow-400 to-orange-400'
+        default:
+          return 'bg-xtreme-yellow'
+      }
+    }
+
+    const getEventIcon = (title) => {
+      switch (title) {
+        case 'Xtreme Night':
+          return '🌟'
+        case 'Evenement':
+          return '🎉'
+        default:
+          return '⛸️'
+      }
+    }
+
     return {
       isToday,
-      isPastDay
+      isPastDay,
+      getEventClass,
+      getEventIcon
     }
   }
 }
