@@ -1,9 +1,9 @@
 <template>
-  <div class="text-center mb-12">
-    <h2 class="text-4xl lg:text-5xl font-heading font-bold mb-6 text-xtreme-yellow">
+  <div class="max-w-6xl mx-auto text-center">
+    <h1 class="text-5xl lg:text-6xl font-heading font-bold mb-8 text-xtreme-yellow ice-glide">
       Trainingskalender 2025-2026
-    </h2>
-    <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+    </h1>
+    <p class="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
       Bekijk ons complete trainingskalender met alle trainingen en speciale evenementen
     </p>
   </div>
@@ -14,3 +14,7 @@ export default {
   name: 'TrainingCalendarHeader'
 }
 </script>
+
+<style scoped>
+
+</style>

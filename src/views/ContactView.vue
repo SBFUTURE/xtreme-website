@@ -400,9 +400,8 @@
             </div>
             <h3 class="text-xl font-heading font-bold mb-2 text-xtreme-yellow">Locatie</h3>
             <p class="text-gray-300">
-              IJsbaan Liedekerke<br>
-              Sportlaan 1<br>
-              1770 Liedekerke, België
+              Schaatsbaan Liedekerke,<br>
+              Sportlaan 1 - 1770 Liedekerke - België
             </p>
           </div>
 
@@ -416,7 +415,7 @@
             <h3 class="text-xl font-heading font-bold mb-2 text-xtreme-yellow">Openingstijden</h3>
             <p class="text-gray-300">
               Trainingen volgens schema<br>
-              Zie <router-link to="/training" class="text-xtreme-yellow hover:text-xtreme-light-yellow">trainingsschema</router-link><br>
+              Zie <router-link to="/trainingskalender" class="text-xtreme-yellow hover:text-xtreme-light-yellow">trainingskalender</router-link><br>
               voor actuele tijden
             </p>
           </div>
