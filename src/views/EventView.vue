@@ -32,11 +32,13 @@
           class="featured-event-card block"
         >
           <div class="relative overflow-hidden rounded-2xl bg-black group cursor-pointer">
-            <img 
-              src="/src/assets/Images/2025-Xtreme-Night-5/IMG_6384.JPG"
-              alt="Xtreme Night 5 evenement" 
-              class="w-full h-[400px] lg:h-[500px] object-cover transition-transform duration-500 group-hover:scale-105"
-            />
+            <div class="relative h-[400px] lg:h-[500px]">
+              <img 
+                src="/src/assets/Images/2025-Xtreme-Night-5/IMG_6260.JPG"
+                alt="Xtreme Night 5 evenement" 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80"></div>
             <div class="absolute bottom-8 left-8 right-8 text-white">
               <div class="flex items-center mb-4">
@@ -83,11 +85,13 @@
             class="event-card group cursor-pointer block"
           >
             <div class="relative overflow-hidden rounded-xl bg-black">
-              <img 
-                :src="event.mainImage" 
-                :alt="event.title + ' evenement'" 
-                class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
-              />
+              <div class="relative h-64">
+                <img 
+                  :src="event.mainImage" 
+                  :alt="event.title + ' evenement'" 
+                  class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+              </div>
               <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
               <div class="absolute top-4 left-4">
                 <div class="bg-xtreme-yellow text-black px-3 py-1 rounded-full font-bold text-sm">
@@ -124,7 +128,7 @@ const events = ref([
     title: 'Xtreme Night 5',
     year: '2025',
     shortDescription: 'Ons eigen georganiseerde spectaculaire schaatsevenement',
-    mainImage: '/src/assets/Images/2025-Xtreme-Night-5/IMG_6384.JPG',
+    mainImage: '/src/assets/Images/2025-Xtreme-Night-5/IMG_6260.JPG',
     imageCount: 3
   },
   {

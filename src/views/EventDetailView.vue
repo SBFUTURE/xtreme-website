@@ -43,61 +43,62 @@
 
       <!-- Main Image Slider -->
       <section class="py-8 px-4">
-        <div class="max-w-6xl mx-auto">
+        <div class="max-w-7xl mx-auto">
           <div class="relative">
             <!-- Image Slider -->
             <div class="relative overflow-hidden rounded-2xl bg-black group">
-              <div class="relative h-[400px] lg:h-[600px]">
+              <div class="image-container relative h-[400px] md:h-[500px] lg:h-[600px] flex items-center justify-center bg-black">
                 <transition name="slide-fade" mode="out-in">
                   <img 
                     :key="currentImageIndex"
                     :src="event.images[currentImageIndex]" 
-                    :alt="event.title + ' - ' + (currentImageIndex + 1)" 
-                    class="w-full h-full object-cover"
+                    :alt="event.title + ' - foto ' + (currentImageIndex + 1)" 
+                    class="max-w-full max-h-full object-contain"
                   />
                 </transition>
                 
                 <!-- Navigation Arrows -->
                 <button 
                   @click="previousImage"
-                  class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-70 transition-all backdrop-blur-sm"
+                  class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-70 text-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-90 transition-all backdrop-blur-sm text-xl font-bold"
                   v-show="event.images.length > 1"
                 >
                   ‹
                 </button>
                 <button 
                   @click="nextImage"
-                  class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-70 transition-all backdrop-blur-sm"
+                  class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-70 text-white rounded-full w-12 h-12 flex items-center justify-center hover:bg-opacity-90 transition-all backdrop-blur-sm text-xl font-bold"
                   v-show="event.images.length > 1"
                 >
                   ›
                 </button>
 
                 <!-- Image Counter -->
-                <div class="absolute bottom-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm backdrop-blur-sm">
+                <div class="absolute bottom-4 right-4 bg-black bg-opacity-70 text-white px-4 py-2 rounded-full text-sm backdrop-blur-sm font-semibold">
                   {{ currentImageIndex + 1 }} / {{ event.images.length }}
                 </div>
+
               </div>
             </div>
 
-            <!-- Thumbnail Navigation -->
-            <div v-if="event.images.length > 1" class="mt-6">
-              <div class="flex justify-center space-x-2 overflow-x-auto pb-2">
+            <!-- Thumbnail Navigation with proper spacing -->
+            <div v-if="event.images.length > 1" class="mt-8">
+              <div class="flex justify-center space-x-3 overflow-x-auto pb-4 pt-6 px-4">
                 <button
                   v-for="(image, index) in event.images"
                   :key="index"
                   @click="currentImageIndex = index"
                   :class="[
-                    'flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all',
+                    'flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 bg-black',
                     currentImageIndex === index 
-                      ? 'border-xtreme-yellow shadow-lg' 
-                      : 'border-transparent hover:border-xtreme-yellow hover:border-opacity-50'
+                      ? 'border-xtreme-yellow shadow-lg scale-110' 
+                      : 'border-gray-500 hover:border-xtreme-yellow hover:border-opacity-70 hover:scale-105'
                   ]"
                 >
                   <img 
                     :src="image" 
                     :alt="event.title + ' - thumbnail ' + (index + 1)"
-                    class="w-full h-full object-cover"
+                    class="w-full h-full object-cover object-center"
                   />
                 </button>
               </div>
@@ -106,49 +107,76 @@
         </div>
       </section>
 
-      <!-- Event Details -->
-      <section class="py-16 px-4">
-        <div class="max-w-4xl mx-auto">
-          <div class="bg-xtreme-dark bg-opacity-70 rounded-2xl p-8 lg:p-12 shadow-frost border border-xtreme-yellow border-opacity-30">
-            
-            <!-- Description -->
-            <div class="mb-8">
-              <h2 class="text-3xl font-heading font-bold mb-6 text-xtreme-yellow">
-                Over Dit Evenement
-              </h2>
-              <p class="text-gray-300 text-lg leading-relaxed">
-                {{ event.description }}
-              </p>
-            </div>
+      <!-- Enhanced Event Details -->
+      <section class="py-20 px-4 bg-gradient-to-b from-transparent via-xtreme-dark via-opacity-10 to-transparent">
+        <div class="max-w-6xl mx-auto">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-5xl lg:text-6xl font-heading font-bold text-xtreme-yellow mb-6">
+              Event Story
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-transparent via-xtreme-yellow to-transparent mx-auto mb-4"></div>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+              Ontdek het verhaal achter dit spectaculaire evenement
+            </p>
+          </div>
 
-            <!-- Highlights -->
-            <div v-if="event.highlights && event.highlights.length > 0">
-              <h3 class="text-2xl font-heading font-bold text-xtreme-yellow mb-6">Hoogtepunten</h3>
-              <div class="grid md:grid-cols-2 gap-4">
-                <div 
-                  v-for="highlight in event.highlights" 
-                  :key="highlight"
-                  class="flex items-start bg-black bg-opacity-30 rounded-lg p-4 transition-all hover:bg-opacity-40"
-                >
-                  <span class="text-xtreme-yellow mr-3 text-xl flex-shrink-0">⭐</span>
-                  <span class="text-gray-300">{{ highlight }}</span>
+          <div class="grid lg:grid-cols-2 gap-12 items-stretch">
+            <!-- Main Description Card -->
+            <div class="bg-gradient-to-br from-xtreme-dark to-black rounded-3xl p-12 shadow-2xl border-2 border-xtreme-yellow border-opacity-30 relative overflow-hidden">
+              <!-- Decorative background -->
+              <div class="absolute top-0 right-0 w-32 h-32 bg-xtreme-yellow opacity-5 rounded-full -translate-y-16 translate-x-16"></div>
+              <div class="absolute bottom-0 left-0 w-24 h-24 bg-xtreme-yellow opacity-5 rounded-full translate-y-12 -translate-x-12"></div>
+              
+              <div class="relative z-10">
+                <div class="flex items-center mb-10">
+                  <div class="w-20 h-20 bg-gradient-to-br from-xtreme-yellow to-xtreme-light-yellow rounded-2xl flex items-center justify-center mr-6 shadow-xl">
+                    <span class="text-4xl">📖</span>
+                  </div>
+                  <div>
+                    <h3 class="text-3xl font-heading font-bold text-xtreme-yellow mb-2">Het Verhaal</h3>
+                    <p class="text-gray-400">Achter de schermen</p>
+                  </div>
+                </div>
+                
+                <div class="bg-black bg-opacity-40 rounded-2xl p-8 border border-xtreme-yellow border-opacity-20 backdrop-blur-sm">
+                  <p class="text-gray-100 text-xl leading-relaxed font-light">
+                    {{ event.description }}
+                  </p>
                 </div>
               </div>
             </div>
 
-            <!-- Call to Action -->
-            <div class="mt-12 text-center">
-              <div class="bg-gradient-to-r from-xtreme-yellow to-xtreme-light-yellow p-0.5 rounded-xl inline-block">
-                <div class="bg-xtreme-dark rounded-xl px-8 py-4">
-                  <p class="text-xtreme-yellow font-semibold text-lg mb-4">
-                    Wil je ook deel uitmaken van onze volgende evenementen?
-                  </p>
-                  <router-link 
-                    to="/contact"
-                    class="btn-primary"
+            <!-- Highlights Card -->
+            <div v-if="event.highlights && event.highlights.length > 0" class="bg-gradient-to-br from-xtreme-dark to-black rounded-3xl p-12 shadow-2xl border-2 border-xtreme-yellow border-opacity-30 relative overflow-hidden">
+              <!-- Decorative background -->
+              <div class="absolute top-0 left-0 w-28 h-28 bg-xtreme-yellow opacity-5 rounded-full -translate-y-14 -translate-x-14"></div>
+              <div class="absolute bottom-0 right-0 w-20 h-20 bg-xtreme-yellow opacity-5 rounded-full translate-y-10 translate-x-10"></div>
+              
+              <div class="relative z-10">
+                <div class="flex items-center mb-10">
+                  <div class="w-20 h-20 bg-gradient-to-br from-xtreme-yellow to-xtreme-light-yellow rounded-2xl flex items-center justify-center mr-6 shadow-xl">
+                    <span class="text-4xl">🌟</span>
+                  </div>
+                  <div>
+                    <h3 class="text-3xl font-heading font-bold text-xtreme-yellow mb-2">Hoogtepunten</h3>
+                    <p class="text-gray-400">De beste momenten</p>
+                  </div>
+                </div>
+                
+                <div class="space-y-5">
+                  <div 
+                    v-for="(highlight, index) in event.highlights" 
+                    :key="highlight"
+                    class="group bg-gradient-to-r from-xtreme-yellow from-opacity-10 to-transparent rounded-2xl p-6 transition-all duration-300 hover:from-opacity-20 border-l-4 border-xtreme-yellow hover:border-xtreme-light-yellow transform hover:translate-x-2 hover:shadow-lg"
                   >
-                    Neem Contact Op
-                  </router-link>
+                    <div class="flex items-start">
+                      <div class="w-10 h-10 bg-xtreme-yellow rounded-xl flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                        <span class="text-black font-bold text-lg">{{ index + 1 }}</span>
+                      </div>
+                      <span class="text-gray-100 text-lg font-medium group-hover:text-white transition-colors duration-300">{{ highlight }}</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -180,6 +208,7 @@ const events = [
     description: 'Xtreme Night 5 was onze vijfde editie van dit geweldige schaatsevenement dat volledig door Xtreme On Ice werd georganiseerd. Een avond vol spannende wedstrijden, artistieke optredens en een onvergetelijke sfeer op het ijs. Leden van onze vereniging, samen met gastschaatsers, lieten hun beste kunnen zien in verschillende categorieën. Het evenement trok bezoekers van heinde en verre en was een waar bewijs van de groeiende reputatie van onze ijsvereniging.',
     mainImage: '/src/assets/Images/2025-Xtreme-Night-5/IMG_6384.JPG',
     images: [
+      '/src/assets/Images/2025-Xtreme-Night-5/IMG_6260.JPG',
       '/src/assets/Images/2025-Xtreme-Night-5/IMG_6384.JPG',
       '/src/assets/Images/2025-Xtreme-Night-5/IMG_6386.JPG',
       '/src/assets/Images/2025-Xtreme-Night-5/IMG_6390.JPG'
@@ -324,10 +353,29 @@ const stopAutoSlide = () => {
   }
 }
 
+// Keyboard navigation
+const handleKeyPress = (event) => {
+  if (event.key === 'ArrowLeft') {
+    previousImage()
+  } else if (event.key === 'ArrowRight') {
+    nextImage()
+  }
+}
+
+// Add keyboard event listeners
+const addKeyboardListeners = () => {
+  document.addEventListener('keydown', handleKeyPress)
+}
+
+const removeKeyboardListeners = () => {
+  document.removeEventListener('keydown', handleKeyPress)
+}
+
 // Lifecycle
 onMounted(() => {
   loadEvent()
   startAutoSlide()
+  addKeyboardListeners()
 })
 
 // Watch for route changes
@@ -343,6 +391,7 @@ watch(() => route.params.id, () => {
 // Cleanup on unmount
 onUnmounted(() => {
   stopAutoSlide()
+  removeKeyboardListeners()
 })
 </script>
 
@@ -372,6 +421,36 @@ onUnmounted(() => {
   transform: translateX(-30px);
 }
 
+/* Enhanced image container */
+.image-container {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Better image display - ensure all images fit within fixed dimensions */
+.image-container img {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Force consistent background for images */
+.image-container::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: -1;
+}
+
 .btn-primary {
   padding: 1rem 2rem;
   background: linear-gradient(135deg, #FFED4E 0%, #FFF59D 100%);
@@ -393,6 +472,23 @@ onUnmounted(() => {
   transform: scale(1.05);
 }
 
+/* Custom opacity classes for gradients */
+.from-opacity-10 {
+  --tw-gradient-from: rgba(255, 237, 78, 0.1);
+}
+
+.from-opacity-20 {
+  --tw-gradient-from: rgba(255, 237, 78, 0.2);
+}
+
+.via-opacity-10 {
+  --tw-gradient-to: rgba(38, 38, 38, 0.1);
+}
+
+.via-opacity-5 {
+  --tw-gradient-to: rgba(255, 237, 78, 0.05);
+}
+
 /* Navigation button styling */
 button {
   transition: all 0.3s ease;
@@ -402,7 +498,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Thumbnail styling */
+/* Thumbnail styling with proper spacing */
 .overflow-x-auto::-webkit-scrollbar {
   height: 6px;
 }
@@ -428,13 +524,27 @@ button:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .flex.space-x-2 {
-    gap: 0.375rem;
+  .text-3xl {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  /* Thumbnail adjustments for mobile */
+  .flex.space-x-3 {
+    gap: 0.5rem;
   }
   
   button[class*="w-20 h-20"] {
-    width: 4rem;
-    height: 4rem;
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  
+  /* Extra padding for mobile thumbnails */
+  .pt-6 {
+    padding-top: 2rem;
   }
 }
 </style>

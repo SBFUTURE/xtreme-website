@@ -133,7 +133,7 @@
     <section class="py-16 px-4 bg-xtreme-dark bg-opacity-50">
       <div class="max-w-4xl mx-auto">
         <h2 class="text-4xl font-heading font-bold mb-12 text-xtreme-yellow text-center">
-          Inschrijvingsformulier
+          Proeftrainingformulier
         </h2>
         
         <div class="ice-card">
