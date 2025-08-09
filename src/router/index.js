@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
 import EventView from '@/views/EventView.vue'
+import EventDetailView from '@/views/EventDetailView.vue'
 import ContactView from '@/views/ContactView.vue'
 import TrainingSchemaView from '@/views/TrainingSchemaView.vue'
 
@@ -40,9 +41,15 @@ const router = createRouter({
       component: TrainingSchemaView
     },
     {
-      path:'/evenementen',
+      path:'/events',
       name: 'events',
       component: EventView
+    },
+    {
+      path: '/events/:id',
+      name: 'event-detail',
+      component: EventDetailView,
+      props: true
     },
     {
       path: '/contact',
