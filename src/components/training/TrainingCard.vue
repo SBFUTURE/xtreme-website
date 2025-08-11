@@ -16,13 +16,13 @@
           </div>
           
           <!-- Event Details -->
-          <div>
+          <div class="flex-1">
             <div class="flex items-center gap-3 mb-2">
-              <h4 class="text-xl font-heading font-bold text-white">
+              <h4 class="text-xl font-heading font-bold text-white whitespace-nowrap">
                 {{ formatDate(training.date) }}
               </h4>
               <span :class="[
-                'px-3 py-1 rounded-full text-sm font-medium',
+                'px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap flex-shrink-0',
                 getBadgeClass(training.title)
               ]">
                 {{ training.title }}
@@ -36,13 +36,14 @@
                 </svg>
                 <span class="font-medium">{{ training.time }}</span>
               </div>
-              
-              <div v-if="training.note" class="flex items-center gap-2">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
-                </svg>
-                <span class="font-medium text-xtreme-light-yellow">{{ training.note }}</span>
-              </div>
+            </div>
+            
+            <!-- Location/Note on separate line -->
+            <div v-if="training.note" class="flex items-center gap-2 text-gray-300 mt-2">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+              </svg>
+              <span class="font-medium text-xtreme-light-yellow">{{ training.note }}</span>
             </div>
           </div>
         </div>
