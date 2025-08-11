@@ -8,6 +8,9 @@
         <p class="text-lg text-gray-300 max-w-3xl mx-auto">
           Ontdek onze geweldige schaatsevenementen en belevenissen
         </p>
+        <p class="text-sm text-gray-400 mt-4 lg:hidden">
+          Swipe om door de evenementen te bladeren
+        </p>
       </div>
 
       <div class="relative">
@@ -16,6 +19,9 @@
           <div 
             class="flex transition-transform duration-500 ease-in-out"
             :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
+            ref="sliderContainer"
+            @touchstart="handleTouchStart"
+            @touchend="handleTouchEnd"
           >
             <div 
               v-for="event in events" 
@@ -61,21 +67,21 @@
           </div>
         </div>
 
-        <!-- Navigation Buttons -->
+        <!-- Navigation Buttons - Hidden on mobile/tablet -->
         <button 
           @click="previousSlide"
-          class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 hover:bg-opacity-80 text-xtreme-yellow p-3 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-xtreme-yellow/20"
+          class="hidden lg:block absolute left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 hover:bg-opacity-80 text-xtreme-yellow p-2 md:p-3 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-xtreme-yellow/20 z-10"
         >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
           </svg>
         </button>
 
         <button 
           @click="nextSlide"
-          class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 hover:bg-opacity-80 text-xtreme-yellow p-3 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-xtreme-yellow/20"
+          class="hidden lg:block absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-60 hover:bg-opacity-80 text-xtreme-yellow p-2 md:p-3 rounded-full transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-xtreme-yellow/20 z-10"
         >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
         </button>
@@ -102,6 +108,8 @@ export default {
     return {
       currentSlide: 0,
       autoPlayInterval: null,
+      touchStartX: 0,
+      touchEndX: 0,
       events: [
         {
           id: 'xtreme-night-5',
@@ -162,6 +170,27 @@ export default {
       } else if (event.key === 'ArrowRight') {
         this.nextSlide()
       }
+    },
+    handleTouchStart(event) {
+      this.touchStartX = event.touches[0].clientX
+    },
+    handleTouchEnd(event) {
+      this.touchEndX = event.changedTouches[0].clientX
+      this.handleSwipe()
+    },
+    handleSwipe() {
+      const swipeThreshold = 50 // minimum distance for swipe
+      const swipeDistance = this.touchStartX - this.touchEndX
+      
+      if (Math.abs(swipeDistance) > swipeThreshold) {
+        if (swipeDistance > 0) {
+          // Swipe left - next slide
+          this.nextSlide()
+        } else {
+          // Swipe right - previous slide
+          this.previousSlide()
+        }
+      }
     }
   },
   mounted() {
@@ -210,11 +239,6 @@ button:disabled:hover {
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
-  .absolute.left-4, .absolute.right-4 {
-    left: 0.5rem;
-    right: 0.5rem;
-  }
-  
   .absolute.bottom-8 {
     bottom: 1rem;
     left: 1rem;
