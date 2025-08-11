@@ -30,8 +30,8 @@ export default {
 <style scoped>
 .announcement-banner {
   position: sticky;
-  top: 0;
-  z-index: 999;
+  top: 80px;
+  z-index: 40;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   border-bottom: 2px solid rgba(255, 237, 78, 0.8);
   backdrop-filter: blur(10px);
