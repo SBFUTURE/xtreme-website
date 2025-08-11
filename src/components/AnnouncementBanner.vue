@@ -1,5 +1,5 @@
 <template>
-  <section class="relative bg-gradient-to-r from-xtreme-yellow to-amber-300 text-black py-4 px-4 announcement-banner">
+  <section class="bg-gradient-to-r from-xtreme-yellow to-amber-300 text-black py-4 px-4 announcement-banner">
     <div class="max-w-7xl mx-auto">
       <div class="flex items-center justify-center text-center space-x-4">
         <div class="animate-pulse text-2xl">🎉</div>
@@ -29,10 +29,12 @@ export default {
 
 <style scoped>
 .announcement-banner {
-  position: relative;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 999;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   border-bottom: 2px solid rgba(255, 237, 78, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .announcement-banner::before {
