@@ -1,5 +1,8 @@
 <template>
   <div class="min-h-screen bg-ice-gradient">
+    <!-- Announcement Banner -->
+    <AnnouncementBanner />
+
     <!-- Hero Section -->
     <section class="relative overflow-hidden py-32 px-4 min-h-screen flex items-center hero-background">
       <!-- Background Image -->
@@ -167,12 +170,14 @@
 <script>
 import EventSlider from '@/components/EventSlider.vue'
 import Sponsors from '@/components/Sponsors.vue'
+import AnnouncementBanner from '@/components/AnnouncementBanner.vue'
 
 export default {
   name: 'HomeView',
   components: {
     EventSlider,
-    Sponsors
+    Sponsors,
+    AnnouncementBanner
   }
 }
 </script>

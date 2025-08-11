@@ -1,5 +1,8 @@
 <template>
   <div class="min-h-screen bg-ice-gradient">
+    <!-- Announcement Banner -->
+    <AnnouncementBanner />
+    
     <!-- Hero Section -->
     <section class="py-20 px-4">
       <div class="max-w-6xl mx-auto text-center">
@@ -120,6 +123,7 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import AnnouncementBanner from '@/components/AnnouncementBanner.vue'
 
 // Event data with fixed image paths
 const events = ref([
