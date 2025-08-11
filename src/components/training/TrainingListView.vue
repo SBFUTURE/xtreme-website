@@ -34,7 +34,7 @@ export default {
     }
   },
 
-  setup() {
+  setup(props) {
     const { formatMonthName } = useTrainingUtils()
 
     return {
