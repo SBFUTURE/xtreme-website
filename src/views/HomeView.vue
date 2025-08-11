@@ -159,77 +159,20 @@
     </section>
 
     <!-- Sponsors Section -->
-    <section class="py-12 px-4 bg-white bg-opacity-5 backdrop-blur-sm">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-10">
-          <h2 class="text-4xl lg:text-5xl font-heading font-bold mb-6 text-xtreme-yellow">
-            Met Dank Aan Onze Partners
-          </h2>
-          <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-            Deze geweldige organisaties maken Xtreme On Ice mogelijk
-          </p>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
-          <div class="sponsor-item">
-            <div class="bg-white bg-opacity-95 rounded-lg p-4 flex items-center justify-center h-16 transition-all duration-300 hover:bg-opacity-100 hover:shadow-lg">
-              <span class="text-gray-700 font-semibold text-xs text-center">Gemeente Liedekerke</span>
-            </div>
-          </div>
-          <div class="sponsor-item">
-            <div class="bg-white bg-opacity-95 rounded-lg p-4 flex items-center justify-center h-16 transition-all duration-300 hover:bg-opacity-100 hover:shadow-lg">
-              <span class="text-gray-700 font-semibold text-xs text-center">Sport Vlaanderen</span>
-            </div>
-          </div>
-          <div class="sponsor-item">
-            <div class="bg-white bg-opacity-95 rounded-lg p-4 flex items-center justify-center h-16 transition-all duration-300 hover:bg-opacity-100 hover:shadow-lg">
-              <span class="text-gray-700 font-semibold text-xs text-center">IJsbaan Partners</span>
-            </div>
-          </div>
-          <div class="sponsor-item">
-            <div class="bg-white bg-opacity-95 rounded-lg p-4 flex items-center justify-center h-16 transition-all duration-300 hover:bg-opacity-100 hover:shadow-lg">
-              <span class="text-gray-700 font-semibold text-xs text-center">Lokale Ondernemers</span>
-            </div>
-          </div>
-          <div class="sponsor-item">
-            <div class="bg-white bg-opacity-95 rounded-lg p-4 flex items-center justify-center h-16 transition-all duration-300 hover:bg-opacity-100 hover:shadow-lg">
-              <span class="text-gray-700 font-semibold text-xs text-center">Gemeenschapscentrum</span>
-            </div>
-          </div>
-          <div class="sponsor-item">
-            <div class="bg-white bg-opacity-95 rounded-lg p-4 flex items-center justify-center h-16 transition-all duration-300 hover:bg-opacity-100 hover:shadow-lg">
-              <span class="text-gray-700 font-semibold text-xs text-center">En Vele Anderen</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center mt-8">
-          <p class="text-gray-500 text-sm mb-3">
-            Geïnteresseerd in een partnership?
-          </p>
-          <router-link 
-            to="/contact"
-            class="inline-flex items-center text-xtreme-yellow hover:text-xtreme-light-yellow transition-colors duration-300 font-semibold text-sm"
-          >
-            Contacteer ons
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-          </router-link>
-        </div>
-      </div>
-    </section>
+    <Sponsors />
 
   </div>
 </template>
 
 <script>
 import EventSlider from '@/components/EventSlider.vue'
+import Sponsors from '@/components/Sponsors.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    EventSlider
+    EventSlider,
+    Sponsors
   }
 }
 </script>
@@ -361,38 +304,8 @@ export default {
   opacity: 1;
 }
 
-.sponsor-item {
-  animation: fadeInUp 0.6s ease-out forwards;
-  opacity: 0;
-}
-
-.sponsor-item:nth-child(1) { animation-delay: 0.1s; }
-.sponsor-item:nth-child(2) { animation-delay: 0.2s; }
-.sponsor-item:nth-child(3) { animation-delay: 0.3s; }
-.sponsor-item:nth-child(4) { animation-delay: 0.4s; }
-.sponsor-item:nth-child(5) { animation-delay: 0.5s; }
-.sponsor-item:nth-child(6) { animation-delay: 0.6s; }
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: 640px) {
-  .sponsor-item .bg-white {
-    height: 3.5rem;
-    padding: 0.75rem;
-  }
-  
-  .sponsor-item span {
-    font-size: 0.625rem;
-  }
+  /* Empty media query - can be removed if not needed */
 }
 
 .cta-image-container {

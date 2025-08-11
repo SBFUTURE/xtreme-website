@@ -95,94 +95,84 @@
   </section>
 </template>
 
-<script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-
-const currentSlide = ref(0)
-
-const events = ref([
-  {
-    id: 'xtreme-night-5',
-    title: 'Xtreme Night 5',
-    year: '2025',
-    description: 'Onze vijfde editie van Xtreme Night was een groot succes! Een avond vol spectaculaire optredens, geweldige sfeer en onvergetelijke momenten op het ijs.',
-    mainImage: '/src/assets/Images/2025-Xtreme-Night-5/IMG_6260.JPG',
-    isOwnEvent: true
+<script>
+export default {
+  name: 'EventSlider',
+  data() {
+    return {
+      currentSlide: 0,
+      autoPlayInterval: null,
+      events: [
+        {
+          id: 'xtreme-night-5',
+          title: 'Xtreme Night 5',
+          year: '2025',
+          description: 'Onze vijfde editie van Xtreme Night was een groot succes! Een avond vol spectaculaire optredens, geweldige sfeer en onvergetelijke momenten op het ijs.',
+          mainImage: '/src/assets/Images/2025-Xtreme-Night-5/IMG_6260.JPG',
+          isOwnEvent: true
+        },
+        {
+          id: 'polarion-2024',
+          title: 'Polarion Evenement',
+          year: '2024',
+          description: 'Spektakulaire show met freestyle en artistieke elementen. Een professionele demonstratie van onze vaardigheden op het ijs.',
+          mainImage: '/src/assets/Images/2024-Polarion/IMG_4117_Freestyle Night-18april.JPG',
+          isOwnEvent: false
+        },
+        {
+          id: 'val-thorens-2024',
+          title: 'Val Thorens Trip',
+          year: '2024',
+          description: 'Onvergetelijke wintersportervaring in de Franse Alpen. Een geweldige trip vol avontuur en kameraadschap.',
+          mainImage: '/src/assets/Images/2024-Val-Thorens/PaulComShoot110.jpg',
+          isOwnEvent: false
+        },
+        {
+          id: 'oostenrijk-2025',
+          title: 'Oostenrijk Trip',
+          year: '2025',
+          description: 'Recente reis naar de Oostenrijkse bergen. Prachtige locaties en onvergetelijke momenten met het team.',
+          mainImage: '/src/assets/Images/2025-Oostenrijk/IMG_6042.JPG',
+          isOwnEvent: false
+        }
+      ]
+    }
   },
-  {
-    id: 'polarion-2024',
-    title: 'Polarion Evenement',
-    year: '2024',
-    description: 'Spektakulaire show met freestyle en artistieke elementen. Een professionele demonstratie van onze vaardigheden op het ijs.',
-    mainImage: '/src/assets/Images/2024-Polarion/IMG_4117_Freestyle Night-18april.JPG',
-    isOwnEvent: false
+  methods: {
+    nextSlide() {
+      this.currentSlide = (this.currentSlide + 1) % this.events.length
+    },
+    previousSlide() {
+      this.currentSlide = this.currentSlide === 0 ? this.events.length - 1 : this.currentSlide - 1
+    },
+    startAutoPlay() {
+      this.autoPlayInterval = setInterval(() => {
+        this.currentSlide = (this.currentSlide + 1) % this.events.length
+      }, 30000) // Change slide every 30 seconds
+    },
+    stopAutoPlay() {
+      if (this.autoPlayInterval) {
+        clearInterval(this.autoPlayInterval)
+        this.autoPlayInterval = null
+      }
+    },
+    handleKeydown(event) {
+      if (event.key === 'ArrowLeft') {
+        this.previousSlide()
+      } else if (event.key === 'ArrowRight') {
+        this.nextSlide()
+      }
+    }
   },
-  {
-    id: 'val-thorens-2024',
-    title: 'Val Thorens Trip',
-    year: '2024',
-    description: 'Onvergetelijke wintersportervaring in de Franse Alpen. Een geweldige trip vol avontuur en kameraadschap.',
-    mainImage: '/src/assets/Images/2024-Val-Thorens/PaulComShoot110.jpg',
-    isOwnEvent: false
+  mounted() {
+    this.startAutoPlay()
+    window.addEventListener('keydown', this.handleKeydown)
   },
-  {
-    id: 'oostenrijk-2025',
-    title: 'Oostenrijk Trip',
-    year: '2025',
-    description: 'Recente reis naar de Oostenrijkse bergen. Prachtige locaties en onvergetelijke momenten met het team.',
-    mainImage: '/src/assets/Images/2025-Oostenrijk/IMG_6042.JPG',
-    isOwnEvent: false
-  }
-])
-
-const nextSlide = () => {
-  currentSlide.value = (currentSlide.value + 1) % events.value.length
-}
-
-const previousSlide = () => {
-  currentSlide.value = currentSlide.value === 0 ? events.value.length - 1 : currentSlide.value - 1
-}
-
-// Auto-play functionality
-let autoPlayInterval = null
-
-const startAutoPlay = () => {
-  autoPlayInterval = setInterval(() => {
-    currentSlide.value = (currentSlide.value + 1) % events.value.length
-  }, 5000) // Change slide every 5 seconds
-}
-
-const stopAutoPlay = () => {
-  if (autoPlayInterval) {
-    clearInterval(autoPlayInterval)
-    autoPlayInterval = null
-  }
-}
-
-onMounted(() => {
-  startAutoPlay()
-})
-
-onUnmounted(() => {
-  stopAutoPlay()
-})
-
-// Keyboard navigation
-const handleKeydown = (event) => {
-  if (event.key === 'ArrowLeft') {
-    previousSlide()
-  } else if (event.key === 'ArrowRight') {
-    nextSlide()
+  unmounted() {
+    this.stopAutoPlay()
+    window.removeEventListener('keydown', this.handleKeydown)
   }
 }
-
-onMounted(() => {
-  window.addEventListener('keydown', handleKeydown)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('keydown', handleKeydown)
-})
 </script>
 
 <style scoped>
