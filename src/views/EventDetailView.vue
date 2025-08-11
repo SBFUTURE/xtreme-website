@@ -267,9 +267,13 @@ const events = [
       '/src/assets/Images/2024-Polarion/DSC_5465.jpg',
       '/src/assets/Images/2024-Polarion/DSC_5643.jpg',
       '/src/assets/Images/2024-Polarion/IMG_1418.JPG',
-      '/src/assets/Images/2024-Polarion/IMG_4087.JPG'
+      '/src/assets/Images/2024-Polarion/IMG_4087.JPG',
+      '/src/assets/Images/2024-Polarion/IMG_Team_Groepsfoto.JPG',
+      '/src/assets/Images/2024-Polarion/IMG_Sprong_Actie_1.JPG',
+      '/src/assets/Images/2024-Polarion/IMG_Sprong_Actie_2.JPG',
+      '/src/assets/Images/2024-Polarion/IMG_Sprong_Actie_3.JPG'
     ],
-    imageCount: 9,
+    imageCount: 13,
     highlights: [
       'Freestyle Night op 18 april',
       'Spectaculaire 360° sprongen van Maarten',
@@ -342,7 +346,7 @@ const startAutoSlide = () => {
   if (event.value && event.value.images.length > 1) {
     autoSlideInterval = setInterval(() => {
       nextImage()
-    }, 5000) // 5 seconds
+    }, 30000) // 30 seconds
   }
 }
 

@@ -71,7 +71,7 @@
             Waarom Xtreme On Ice?
           </h2>
           <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-            Ontdek wat ons onderscheidt als ijsvereniging in Liezele, België
+            Ontdek wat ons onderscheidt als ijsvereniging in Liedekerke, België
           </p>
         </div>
 
