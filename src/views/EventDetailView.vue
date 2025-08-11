@@ -268,10 +268,10 @@ const events = [
       '/src/assets/Images/2024-Polarion/DSC_5643.jpg',
       '/src/assets/Images/2024-Polarion/IMG_1418.JPG',
       '/src/assets/Images/2024-Polarion/IMG_4087.JPG',
-      '/src/assets/Images/2024-Polarion/IMG_Team_Groepsfoto.JPG',
-      '/src/assets/Images/2024-Polarion/IMG_Sprong_Actie_1.JPG',
-      '/src/assets/Images/2024-Polarion/IMG_Sprong_Actie_2.JPG',
-      '/src/assets/Images/2024-Polarion/IMG_Sprong_Actie_3.JPG'
+      '/src/assets/Images/2024-Polarion/Group-Picture.jpg',
+      '/src/assets/Images/2024-Polarion/Arne-Jump.jpg',
+      '/src/assets/Images/2024-Polarion/Maarten-Jump.JPG',
+      '/src/assets/Images/2024-Polarion/Maarten-CrazyJump.JPG'
     ],
     imageCount: 13,
     highlights: [
