@@ -115,74 +115,122 @@
       </div>
     </section>
 
-    <!-- Photo Gallery Section -->
-    <section class="py-20 px-4">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl lg:text-5xl font-heading font-bold mb-6 text-xtreme-yellow">
-            In Actie
-          </h2>
-          <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-            Bekijk meer van onze gezellige schaatsevenementen en trainingen
-          </p>
-        </div>
+    <!-- Events Slider Section -->
+    <EventSlider />
 
-        <div class="max-w-2xl mx-auto">
-          <div class="gallery-item group">
-            <div class="relative overflow-hidden rounded-xl bg-black">
+    <!-- Call to Action Section -->
+    <section class="py-16 px-4 bg-gradient-to-r from-xtreme-dark via-xtreme-dark to-xtreme-dark bg-opacity-80">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="text-center lg:text-left">
+            <h2 class="text-4xl lg:text-5xl font-heading font-bold mb-6 text-xtreme-yellow">
+              Klaar om te Beginnen?
+            </h2>
+            <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+              Sluit je aan bij Xtreme On Ice en ervaar de opwinding van schaatsen in een professionele en vriendelijke omgeving. Of je nu beginner bent of al ervaren, bij ons vind je de perfecte training.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <router-link 
+                to="/contact"
+                class="btn-primary"
+              >
+                Neem Contact Op
+              </router-link>
+              <router-link 
+                to="/trainingskalender"
+                class="btn-secondary"
+              >
+                Bekijk Trainingen
+              </router-link>
+            </div>
+          </div>
+          <div class="flex justify-center lg:justify-end">
+            <div class="relative cta-image-container ice-card">
               <img 
                 src="@/assets/Images/professional-pictures/IMG_4086.JPG" 
-                alt="Xtreme On Ice evenement" 
-                class="w-full h-auto min-h-[500px] max-h-[600px] object-cover transition-transform duration-300 group-hover:scale-110"
+                alt="Schaatsen bij Xtreme On Ice" 
+                class="w-full h-80 object-cover rounded-xl transition-all duration-300 hover:scale-105"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
-              <div class="absolute bottom-6 left-6 text-white">
-                <h3 class="text-3xl font-heading font-bold text-xtreme-yellow mb-3">
-                  Evenement Sfeer
-                </h3>
-                <p class="text-lg text-gray-200">
-                  De gezellige en professionele atmosfeer tijdens onze schaatsevenementen waar iedereen welkom is
-                </p>
-              </div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-xl"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section class="py-20 px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <div class="bg-xtreme-dark bg-opacity-70 rounded-2xl p-12 shadow-frost border border-xtreme-yellow border-opacity-30">
+    <!-- Sponsors Section -->
+    <section class="py-12 px-4 bg-white bg-opacity-5 backdrop-blur-sm">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-10">
           <h2 class="text-4xl lg:text-5xl font-heading font-bold mb-6 text-xtreme-yellow">
-            Klaar om te Beginnen?
+            Met Dank Aan Onze Partners
           </h2>
-          <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Sluit je aan bij Xtreme On Ice en ervaar de opwinding van schaatsen in een professionele en vriendelijke omgeving.
+          <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+            Deze geweldige organisaties maken Xtreme On Ice mogelijk
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <router-link 
-              to="/contact"
-              class="btn-primary"
-            >
-              Neem Contact Op
-            </router-link>
-            <router-link 
-              to="/events"
-              class="btn-secondary"
-            >
-              Bekijk Schema
-            </router-link>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
+          <div class="sponsor-item">
+            <div class="bg-white bg-opacity-95 rounded-lg p-4 flex items-center justify-center h-16 transition-all duration-300 hover:bg-opacity-100 hover:shadow-lg">
+              <span class="text-gray-700 font-semibold text-xs text-center">Gemeente Liedekerke</span>
+            </div>
           </div>
+          <div class="sponsor-item">
+            <div class="bg-white bg-opacity-95 rounded-lg p-4 flex items-center justify-center h-16 transition-all duration-300 hover:bg-opacity-100 hover:shadow-lg">
+              <span class="text-gray-700 font-semibold text-xs text-center">Sport Vlaanderen</span>
+            </div>
+          </div>
+          <div class="sponsor-item">
+            <div class="bg-white bg-opacity-95 rounded-lg p-4 flex items-center justify-center h-16 transition-all duration-300 hover:bg-opacity-100 hover:shadow-lg">
+              <span class="text-gray-700 font-semibold text-xs text-center">IJsbaan Partners</span>
+            </div>
+          </div>
+          <div class="sponsor-item">
+            <div class="bg-white bg-opacity-95 rounded-lg p-4 flex items-center justify-center h-16 transition-all duration-300 hover:bg-opacity-100 hover:shadow-lg">
+              <span class="text-gray-700 font-semibold text-xs text-center">Lokale Ondernemers</span>
+            </div>
+          </div>
+          <div class="sponsor-item">
+            <div class="bg-white bg-opacity-95 rounded-lg p-4 flex items-center justify-center h-16 transition-all duration-300 hover:bg-opacity-100 hover:shadow-lg">
+              <span class="text-gray-700 font-semibold text-xs text-center">Gemeenschapscentrum</span>
+            </div>
+          </div>
+          <div class="sponsor-item">
+            <div class="bg-white bg-opacity-95 rounded-lg p-4 flex items-center justify-center h-16 transition-all duration-300 hover:bg-opacity-100 hover:shadow-lg">
+              <span class="text-gray-700 font-semibold text-xs text-center">En Vele Anderen</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <p class="text-gray-500 text-sm mb-3">
+            Geïnteresseerd in een partnership?
+          </p>
+          <router-link 
+            to="/contact"
+            class="inline-flex items-center text-xtreme-yellow hover:text-xtreme-light-yellow transition-colors duration-300 font-semibold text-sm"
+          >
+            Contacteer ons
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </router-link>
         </div>
       </div>
     </section>
+
   </div>
 </template>
 
 <script>
+import EventSlider from '@/components/EventSlider.vue'
+
 export default {
-  name: 'HomeView'
+  name: 'HomeView',
+  components: {
+    EventSlider
+  }
 }
 </script>
 
@@ -313,32 +361,61 @@ export default {
   opacity: 1;
 }
 
-.gallery-item {
+.sponsor-item {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.sponsor-item:nth-child(1) { animation-delay: 0.1s; }
+.sponsor-item:nth-child(2) { animation-delay: 0.2s; }
+.sponsor-item:nth-child(3) { animation-delay: 0.3s; }
+.sponsor-item:nth-child(4) { animation-delay: 0.4s; }
+.sponsor-item:nth-child(5) { animation-delay: 0.5s; }
+.sponsor-item:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .sponsor-item .bg-white {
+    height: 3.5rem;
+    padding: 0.75rem;
+  }
+  
+  .sponsor-item span {
+    font-size: 0.625rem;
+  }
+}
+
+.cta-image-container {
   transition: all 0.3s ease;
 }
 
-.gallery-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(255, 237, 78, 0.3);
-}
-
-.gallery-item img {
-  filter: brightness(0.9);
+.ice-card {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 237, 78, 0.3);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
+  overflow: hidden;
+  padding: 0;
 }
 
-.gallery-item:hover img {
-  filter: brightness(1.1);
+.ice-card:hover {
+  border-color: rgba(255, 237, 78, 0.6);
+  box-shadow: 0 4px 20px rgba(255, 237, 78, 0.3);
 }
 
-.gallery-item .absolute.bottom-6 {
-  transform: translateY(10px);
-  opacity: 0.9;
-  transition: all 0.3s ease;
-}
-
-.gallery-item:hover .absolute.bottom-6 {
-  transform: translateY(0);
-  opacity: 1;
+.ice-card img {
+  border-radius: calc(0.75rem - 1px);
 }
 </style>

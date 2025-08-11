@@ -67,7 +67,7 @@
               </router-link>
             </li>
             <li>
-              <router-link to="/evenementen" class="text-gray-300 hover:text-xtreme-yellow transition-colors duration-300">
+              <router-link to="/events" class="text-gray-300 hover:text-xtreme-yellow transition-colors duration-300">
                 Evenementen
               </router-link>
             </li>
