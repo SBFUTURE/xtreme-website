@@ -11,7 +11,7 @@
               class="h-16 w-16 rounded-full shadow-ice border-2 border-xtreme-yellow frost-sparkle"
             />
           </div>
-          <div class="hidden sm:block">
+          <div>
             <h1 class="text-2xl font-heading font-bold text-xtreme-yellow">
               Xtreme On Ice
             </h1>

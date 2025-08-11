@@ -4,7 +4,7 @@
     <AnnouncementBanner />
 
     <!-- Hero Section -->
-    <section class="relative overflow-hidden py-32 px-4 min-h-screen flex items-center hero-background">
+    <section class="relative overflow-hidden py-16 px-4 min-h-screen flex items-center hero-background">
       <!-- Background Image -->
       <div class="absolute inset-0 z-0">
         <img 
@@ -19,15 +19,33 @@
       </div>
       
       <div class="max-w-7xl mx-auto relative z-10">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="text-center lg:text-left ice-glide">
+        <div class="flex flex-col lg:grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+          <!-- Logo Section - Shows first on mobile/tablet -->
+          <div class="flex justify-center lg:justify-end order-1 lg:order-2">
+            <div class="relative">
+              <div class="bg-black bg-opacity-40 rounded-full p-4 backdrop-blur-sm border-2 border-xtreme-yellow">
+                <img 
+                  src="@/assets/Images/XtremeLogo.jpg" 
+                  alt="Xtreme On Ice Logo" 
+                  class="w-72 h-72 lg:w-80 lg:h-80 rounded-full shadow-ice frost-sparkle"
+                />
+              </div>
+              <!-- Enhanced Decorative elements -->
+              <div class="absolute -top-6 -right-6 w-10 h-10 bg-xtreme-yellow rounded-full frost-sparkle animation-delay-300 shadow-lg"></div>
+              <div class="absolute -bottom-8 -left-8 w-8 h-8 bg-xtreme-light-yellow rounded-full frost-sparkle animation-delay-600 shadow-lg"></div>
+              <div class="absolute top-1/2 -left-10 w-6 h-6 bg-xtreme-yellow rounded-full frost-sparkle animation-delay-900 shadow-lg"></div>
+            </div>
+          </div>
+          
+          <!-- Text Section - Shows second on mobile/tablet -->
+          <div class="text-center lg:text-left ice-glide order-2 lg:order-1">
             <h1 class="text-6xl lg:text-8xl font-heading font-bold mb-6 text-xtreme-yellow text-shadow-ice">
               XTREME ON ICE
             </h1>
             <h2 class="text-3xl lg:text-4xl font-heading font-medium mb-8 text-white drop-shadow-lg">
               IJsvereniging Liedekerke - België
             </h2>
-            <p class="text-xl lg:text-2xl mb-12 text-gray-100 max-w-2xl leading-relaxed drop-shadow-md">
+            <p class="text-xl lg:text-2xl mb-12 text-gray-100 max-w-2xl leading-relaxed drop-shadow-md mx-auto lg:mx-0">
               Welkom bij Xtreme On Ice, dé ijsvereniging waar passie voor schaatsen en plezier samenkomen. 
               Ontdek de magie van het ijs in een professionele en vriendelijke omgeving.
             </p>
@@ -44,22 +62,6 @@
               >
                 Meer Over Ons
               </router-link>
-            </div>
-          </div>
-          
-          <div class="flex justify-center lg:justify-end">
-            <div class="relative">
-              <div class="bg-black bg-opacity-40 rounded-full p-4 backdrop-blur-sm border-2 border-xtreme-yellow">
-                <img 
-                  src="@/assets/Images/XtremeLogo.jpg" 
-                  alt="Xtreme On Ice Logo" 
-                  class="w-72 h-72 lg:w-80 lg:h-80 rounded-full shadow-ice frost-sparkle"
-                />
-              </div>
-              <!-- Enhanced Decorative elements -->
-              <div class="absolute -top-6 -right-6 w-10 h-10 bg-xtreme-yellow rounded-full frost-sparkle animation-delay-300 shadow-lg"></div>
-              <div class="absolute -bottom-8 -left-8 w-8 h-8 bg-xtreme-light-yellow rounded-full frost-sparkle animation-delay-600 shadow-lg"></div>
-              <div class="absolute top-1/2 -left-10 w-6 h-6 bg-xtreme-yellow rounded-full frost-sparkle animation-delay-900 shadow-lg"></div>
             </div>
           </div>
         </div>
