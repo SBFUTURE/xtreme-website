@@ -121,12 +121,12 @@
           </li>
           <li>
             <router-link 
-              to="/trainingsschema" 
+              to="/trainingskalender" 
               @click="closeMobileMenu"
               class="block px-3 py-2 text-frost-white hover:text-xtreme-yellow hover:bg-xtreme-dark rounded-md transition-all duration-300 font-heading tracking-wide"
               active-class="text-xtreme-yellow bg-xtreme-dark"
             >
-              Trainingsschema
+              Trainingskalender
             </router-link>
           </li>
           <li>

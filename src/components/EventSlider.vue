@@ -23,7 +23,7 @@
               class="w-full flex-shrink-0"
             >
               <router-link 
-                :to="'/events'"
+                :to="`/events/${event.id}`"
                 class="relative h-[500px] lg:h-[600px] event-slide-container block"
               >
                 <img 
