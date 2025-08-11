@@ -13,16 +13,35 @@
     ]">{{ day }}</div>
     
     <!-- Training Events -->
-    <div class="space-y-1">
-      <div v-for="training in trainings" 
+    <div class="space-y-1 overflow-hidden">
+      <div v-for="(training, index) in trainings.slice(0, 3)" 
            :key="training.date"
            :class="[
-             'text-xs px-1 py-0.5 rounded text-black font-medium truncate',
+             'text-xs px-1.5 py-1 rounded text-black font-medium cursor-pointer transition-all hover:brightness-110',
              getEventClass(training.title)
            ]"
            :title="`${training.title} - ${training.time}${training.note ? ' - ' + training.note : ''}`">
-        {{ training.time.split('-')[0] }}
-        {{ getEventIcon(training.title) }}
+        
+        <!-- Mobile: Simple display -->
+        <div class="sm:hidden flex items-center justify-between">
+          <span class="font-bold text-xs">{{ training.time.split('-')[0] }}</span>
+          <span class="text-[10px] opacity-90">{{ getEventLabel(training.title) }}</span>
+        </div>
+        
+        <!-- Desktop: Full display -->
+        <div class="hidden sm:flex items-center justify-between">
+          <div>
+            <div class="font-bold text-xs leading-tight">{{ training.time }}</div>
+            <div class="text-[10px] opacity-90 leading-tight">{{ training.title }}</div>
+          </div>
+          <span class="text-sm opacity-75">{{ getEventIcon(training.title) }}</span>
+        </div>
+      </div>
+      
+      <!-- Show "+X more" if there are more events -->
+      <div v-if="trainings.length > 3" 
+           class="text-[9px] text-gray-400 px-1 py-0.5 bg-gray-800 bg-opacity-50 rounded text-center">
+        +{{ trainings.length - 3 }}
       </div>
     </div>
   </div>
@@ -65,11 +84,23 @@ export default {
       }
     }
 
+    const getEventLabel = (title) => {
+      switch (title) {
+        case 'Xtreme Night':
+          return 'Night'
+        case 'Evenement':
+          return 'Event'
+        default:
+          return 'Train'
+      }
+    }
+
     return {
       isToday,
       isPastDay,
       getEventClass,
-      getEventIcon
+      getEventIcon,
+      getEventLabel
     }
   }
 }

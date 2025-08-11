@@ -1,16 +1,16 @@
 <template>
-  <div class="calendar-grid bg-xtreme-dark bg-opacity-50 rounded-xl p-6 border border-xtreme-yellow border-opacity-20">
+  <div class="calendar-grid bg-xtreme-dark bg-opacity-50 rounded-xl p-3 sm:p-6 border border-xtreme-yellow border-opacity-20">
     <!-- Days Header -->
-    <div class="grid grid-cols-7 gap-2 mb-4">
+    <div class="grid grid-cols-7 gap-1 sm:gap-2 mb-2 sm:mb-4">
       <div v-for="day in ['Ma', 'Di', 'Wo', 'Do', 'Vr', 'Za', 'Zo']" 
            :key="day" 
-           class="text-center font-heading font-bold text-xtreme-yellow py-3">
+           class="text-center font-heading font-bold text-xtreme-yellow text-sm sm:text-base py-2 sm:py-3">
         {{ day }}
       </div>
     </div>
     
     <!-- Calendar Days -->
-    <div class="grid grid-cols-7 gap-2">
+    <div class="grid grid-cols-7 gap-1 sm:gap-2">
       <!-- Empty cells for days before month starts -->
       <div v-for="empty in getEmptyDaysAtStart(currentMonthKey)" 
            :key="`empty-start-${empty}`" 
