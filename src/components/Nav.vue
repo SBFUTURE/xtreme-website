@@ -22,12 +22,12 @@
         </router-link>
 
         <!-- Desktop Navigation -->
-        <div class="hidden md:block">
-          <ul class="flex items-center space-x-8">
+        <div class="hidden lg:block">
+          <ul class="flex items-center space-x-4 xl:space-x-8">
             <li>
               <router-link 
                 to="/" 
-                class="nav-link text-frost-white hover:text-xtreme-yellow transition-all duration-300 font-heading font-medium text-lg tracking-wide"
+                class="nav-link text-frost-white hover:text-xtreme-yellow transition-all duration-300 font-heading font-medium lg:text-base xl:text-lg tracking-wide"
                 active-class="text-xtreme-yellow border-b-2 border-xtreme-yellow"
               >
                 Home
@@ -36,7 +36,7 @@
             <li>
               <router-link 
                 to="/about" 
-                class="nav-link text-frost-white hover:text-xtreme-yellow transition-all duration-300 font-heading font-medium text-lg tracking-wide"
+                class="nav-link text-frost-white hover:text-xtreme-yellow transition-all duration-300 font-heading font-medium lg:text-base xl:text-lg tracking-wide"
                 active-class="text-xtreme-yellow border-b-2 border-xtreme-yellow"
               >
                 Over Ons
@@ -45,7 +45,7 @@
             <li>
               <router-link 
                 to="/events" 
-                class="nav-link text-frost-white hover:text-xtreme-yellow transition-all duration-300 font-heading font-medium text-lg tracking-wide"
+                class="nav-link text-frost-white hover:text-xtreme-yellow transition-all duration-300 font-heading font-medium lg:text-base xl:text-lg tracking-wide"
                 active-class="text-xtreme-yellow border-b-2 border-xtreme-yellow"
               >
                 Evenementen
@@ -54,7 +54,7 @@
             <li>
               <router-link 
                 to="/trainingskalender" 
-                class="nav-link text-frost-white hover:text-xtreme-yellow transition-all duration-300 font-heading font-medium text-lg tracking-wide"
+                class="nav-link text-frost-white hover:text-xtreme-yellow transition-all duration-300 font-heading font-medium lg:text-base xl:text-lg tracking-wide"
                 active-class="text-xtreme-yellow border-b-2 border-xtreme-yellow"
               >
                 Trainingskalender
@@ -63,7 +63,7 @@
             <li>
               <router-link 
                 to="/contact" 
-                class="nav-link text-frost-white hover:text-xtreme-yellow transition-all duration-300 font-heading font-medium text-lg tracking-wide"
+                class="nav-link text-frost-white hover:text-xtreme-yellow transition-all duration-300 font-heading font-medium lg:text-base xl:text-lg tracking-wide"
                 active-class="text-xtreme-yellow border-b-2 border-xtreme-yellow"
               >
                 Contact
@@ -73,7 +73,7 @@
         </div>
 
         <!-- Mobile menu button -->
-        <div class="md:hidden">
+        <div class="lg:hidden">
           <button
             @click="toggleMobileMenu"
             class="text-xtreme-yellow hover:text-xtreme-light-yellow focus:outline-none focus:text-xtreme-light-yellow transition-colors duration-300"
@@ -87,7 +87,7 @@
       </div>
 
       <!-- Mobile Navigation -->
-      <div v-if="mobileMenuOpen" class="md:hidden border-t border-xtreme-yellow border-opacity-30">
+      <div v-if="mobileMenuOpen" class="lg:hidden border-t border-xtreme-yellow border-opacity-30">
         <ul class="px-2 pt-2 pb-3 space-y-1 bg-xtreme-black bg-opacity-50">
           <li>
             <router-link 
