@@ -22,7 +22,10 @@
               :key="event.id"
               class="w-full flex-shrink-0"
             >
-              <div class="relative h-[500px] lg:h-[600px] event-slide-container">
+              <router-link 
+                :to="'/events'"
+                class="relative h-[500px] lg:h-[600px] event-slide-container block"
+              >
                 <img 
                   :src="event.mainImage" 
                   :alt="event.title + ' evenement'" 
@@ -46,17 +49,14 @@
                   <p class="text-lg text-gray-200 max-w-2xl mb-6">
                     {{ event.description }}
                   </p>
-                  <router-link 
-                    :to="`/events/${event.id}`"
-                    class="inline-flex items-center bg-xtreme-yellow text-black px-6 py-3 rounded-lg font-bold text-sm transition-all duration-300 hover:bg-xtreme-light-yellow hover:scale-105"
-                  >
+                  <span class="inline-flex items-center bg-xtreme-yellow text-black px-6 py-3 rounded-lg font-bold text-sm transition-all duration-300 hover:bg-xtreme-light-yellow hover:scale-105">
                     Bekijk Meer
                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                     </svg>
-                  </router-link>
+                  </span>
                 </div>
-              </div>
+              </router-link>
             </div>
           </div>
         </div>
