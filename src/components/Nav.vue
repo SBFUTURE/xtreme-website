@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-ice-gradient shadow-frost sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
+  <nav class="bg-ice-gradient shadow-frost sticky top-0 z-[1000] backdrop-blur-sm bg-opacity-95">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <!-- Logo Section -->
@@ -87,8 +87,8 @@
       </div>
 
       <!-- Mobile Navigation -->
-      <div v-if="mobileMenuOpen" class="lg:hidden border-t border-xtreme-yellow border-opacity-30">
-        <ul class="px-2 pt-2 pb-3 space-y-1 bg-xtreme-black bg-opacity-50">
+      <div v-if="mobileMenuOpen" class="lg:hidden border-t border-xtreme-yellow border-opacity-30 absolute top-full left-0 right-0 z-[1002] bg-xtreme-black bg-opacity-95 backdrop-blur-md shadow-2xl">
+        <ul class="px-2 pt-2 pb-3 space-y-1">
           <li>
             <router-link 
               to="/" 
