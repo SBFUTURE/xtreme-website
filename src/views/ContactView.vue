@@ -228,7 +228,8 @@
                 <select 
                   id="experience" 
                   v-model="form.experience"
-                  class="w-full px-4 py-3 rounded-lg bg-xtreme-dark border border-gray-600 text-white focus:border-xtreme-yellow focus:ring-1 focus:ring-xtreme-yellow outline-none transition-colors"
+                  class="w-full px-4 py-3 pr-10 rounded-lg bg-xtreme-dark border border-gray-600 text-white focus:border-xtreme-yellow focus:ring-1 focus:ring-xtreme-yellow outline-none transition-colors appearance-none bg-no-repeat bg-right bg-[length:20px_20px]"
+                  style="background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'white\'><path d=\'M7 10l5 5 5-5z\'/></svg>'); background-position: calc(100% - 12px) center;"
                 >
                   <option value="beginner">Beginner (geen ervaring)</option>
                   <option value="intermediate">Gemiddeld (enkele jaren)</option>
