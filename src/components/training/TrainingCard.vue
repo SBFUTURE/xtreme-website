@@ -5,52 +5,52 @@
         getCardClass(training.title)
       ]"
     >
-      <div class="flex items-center justify-between p-6">
-        <div class="flex items-center space-x-4">
+      <div class="flex items-start justify-between p-4 sm:p-6 gap-3">
+        <div class="flex items-start space-x-3 sm:space-x-4 min-w-0 flex-1">
           <!-- Date Circle -->
           <div :class="[
-            'w-16 h-16 rounded-full flex items-center justify-center font-bold text-lg',
+            'w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center font-bold text-sm sm:text-lg flex-shrink-0',
             getDateCircleClass(training.title)
           ]">
             {{ formatDay(training.date) }}
           </div>
           
           <!-- Event Details -->
-          <div class="flex-1">
-            <div class="flex items-center gap-3 mb-2">
-              <h4 class="text-xl font-heading font-bold text-white whitespace-nowrap">
+          <div class="min-w-0 flex-1">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-2 mb-2">
+              <h4 class="text-lg sm:text-xl font-heading font-bold text-white truncate">
                 {{ formatDate(training.date) }}
               </h4>
               <span :class="[
-                'px-3 py-1 rounded-full text-sm font-medium whitespace-nowrap flex-shrink-0',
+                'px-2 py-1 sm:px-3 rounded-full text-xs sm:text-sm font-medium inline-block w-fit',
                 getBadgeClass(training.title)
               ]">
                 {{ training.title }}
               </span>
             </div>
             
-            <div class="flex items-center gap-4 text-gray-300">
-              <div class="flex items-center gap-2">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <div class="flex items-center gap-2 sm:gap-4 text-gray-300">
+              <div class="flex items-center gap-1 sm:gap-2 min-w-0">
+                <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
                 </svg>
-                <span class="font-medium">{{ training.time }}</span>
+                <span class="font-medium text-sm sm:text-base">{{ training.time }}</span>
               </div>
             </div>
             
             <!-- Location/Note on separate line -->
-            <div v-if="training.note" class="flex items-center gap-2 text-gray-300 mt-2">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <div v-if="training.note" class="flex items-start gap-1 sm:gap-2 text-gray-300 mt-2">
+              <svg class="w-4 h-4 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
               </svg>
-              <span class="font-medium text-xtreme-light-yellow">{{ training.note }}</span>
+              <span class="font-medium text-xtreme-light-yellow text-sm sm:text-base leading-tight">{{ training.note }}</span>
             </div>
           </div>
         </div>
 
         <!-- Arrow Icon -->
-        <div class="text-xtreme-yellow group-hover:text-xtreme-light-yellow transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="text-xtreme-yellow group-hover:text-xtreme-light-yellow transition-colors flex-shrink-0">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
         </div>
