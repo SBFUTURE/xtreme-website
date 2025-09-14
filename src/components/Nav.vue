@@ -6,7 +6,7 @@
         <router-link to="/" class="flex items-center space-x-4 hover:opacity-80 transition-opacity duration-300">
           <div class="flex-shrink-0">
             <img 
-              src="/Images/XtremeLogo.jpg" 
+              :src="XtremeLogo" 
               alt="Xtreme On Ice Logo" 
               class="h-16 w-16 rounded-full shadow-ice border-2 border-xtreme-yellow frost-sparkle"
             />
@@ -147,6 +147,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import XtremeLogo from '@/assets/Images/XtremeLogo.jpg'
 
 const mobileMenuOpen = ref(false)
 
