@@ -6,7 +6,7 @@
         <router-link to="/" class="flex items-center space-x-4 hover:opacity-80 transition-opacity duration-300">
           <div class="flex-shrink-0">
             <img 
-              src="../assets/Images/XtremeLogo.jpg" 
+              src="/Images/XtremeLogo.jpg" 
               alt="Xtreme On Ice Logo" 
               class="h-16 w-16 rounded-full shadow-ice border-2 border-xtreme-yellow frost-sparkle"
             />
