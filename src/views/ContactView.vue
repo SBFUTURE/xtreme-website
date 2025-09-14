@@ -145,8 +145,9 @@
         </h2>
         
         <div class="ice-card">
-          <form @submit.prevent="submitForm" class="space-y-6">
-            <!-- Personal Information -->
+          <form action="https://formspree.io/f/xrbadryp" method="POST" class="space-y-6">
+
+            <!-- Personal Information (Simplified) -->
             <div class="grid md:grid-cols-2 gap-6">
               <div>
                 <label class="block text-xtreme-yellow font-heading mb-2" for="firstName">
@@ -155,13 +156,12 @@
                 <input 
                   type="text" 
                   id="firstName" 
-                  v-model="form.firstName"
+                  name="firstName"
                   required
                   class="w-full px-4 py-3 rounded-lg bg-xtreme-dark border border-gray-600 text-white focus:border-xtreme-yellow focus:ring-1 focus:ring-xtreme-yellow outline-none transition-colors"
                   placeholder="Je voornaam"
                 />
               </div>
-              
               <div>
                 <label class="block text-xtreme-yellow font-heading mb-2" for="lastName">
                   Achternaam *
@@ -169,14 +169,13 @@
                 <input 
                   type="text" 
                   id="lastName" 
-                  v-model="form.lastName"
+                  name="lastName"
                   required
                   class="w-full px-4 py-3 rounded-lg bg-xtreme-dark border border-gray-600 text-white focus:border-xtreme-yellow focus:ring-1 focus:ring-xtreme-yellow outline-none transition-colors"
                   placeholder="Je achternaam"
                 />
               </div>
             </div>
-
             <div class="grid md:grid-cols-2 gap-6">
               <div>
                 <label class="block text-xtreme-yellow font-heading mb-2" for="email">
@@ -185,13 +184,12 @@
                 <input 
                   type="email" 
                   id="email" 
-                  v-model="form.email"
+                  name="email"
                   required
                   class="w-full px-4 py-3 rounded-lg bg-xtreme-dark border border-gray-600 text-white focus:border-xtreme-yellow focus:ring-1 focus:ring-xtreme-yellow outline-none transition-colors"
                   placeholder="je.email@example.com"
                 />
               </div>
-              
               <div>
                 <label class="block text-xtreme-yellow font-heading mb-2" for="phone">
                   Telefoonnummer *
@@ -199,7 +197,7 @@
                 <input 
                   type="tel" 
                   id="phone" 
-                  v-model="form.phone"
+                  name="phone"
                   required
                   class="w-full px-4 py-3 rounded-lg bg-xtreme-dark border border-gray-600 text-white focus:border-xtreme-yellow focus:ring-1 focus:ring-xtreme-yellow outline-none transition-colors"
                   placeholder="+32 123 45 67 89"
@@ -207,137 +205,12 @@
               </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-xtreme-yellow font-heading mb-2" for="birthDate">
-                  Geboortedatum *
-                </label>
-                <input 
-                  type="date" 
-                  id="birthDate" 
-                  v-model="form.birthDate"
-                  required
-                  class="w-full px-4 py-3 rounded-lg bg-xtreme-dark border border-gray-600 text-white focus:border-xtreme-yellow focus:ring-1 focus:ring-xtreme-yellow outline-none transition-colors"
-                />
-              </div>
-              
-              <div>
-                <label class="block text-xtreme-yellow font-heading mb-2" for="experience">
-                  Schaatservaring
-                </label>
-                <select 
-                  id="experience" 
-                  v-model="form.experience"
-                  class="w-full px-4 py-3 pr-10 rounded-lg bg-xtreme-dark border border-gray-600 text-white focus:border-xtreme-yellow focus:ring-1 focus:ring-xtreme-yellow outline-none transition-colors appearance-none bg-no-repeat bg-right bg-[length:20px_20px]"
-                  style="background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'white\'><path d=\'M7 10l5 5 5-5z\'/></svg>'); background-position: calc(100% - 12px) center;"
-                >
-                  <option value="beginner">Beginner (geen ervaring)</option>
-                  <option value="intermediate">Gemiddeld (enkele jaren)</option>
-                  <option value="advanced">Gevorderd (veel ervaring)</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Address -->
-            <div>
-              <label class="block text-xtreme-yellow font-heading mb-2" for="address">
-                Adres *
-              </label>
-              <input 
-                type="text" 
-                id="address" 
-                v-model="form.address"
-                required
-                class="w-full px-4 py-3 rounded-lg bg-xtreme-dark border border-gray-600 text-white focus:border-xtreme-yellow focus:ring-1 focus:ring-xtreme-yellow outline-none transition-colors"
-                placeholder="Straat + nummer"
-              />
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-xtreme-yellow font-heading mb-2" for="postalCode">
-                  Postcode *
-                </label>
-                <input 
-                  type="text" 
-                  id="postalCode" 
-                  v-model="form.postalCode"
-                  required
-                  class="w-full px-4 py-3 rounded-lg bg-xtreme-dark border border-gray-600 text-white focus:border-xtreme-yellow focus:ring-1 focus:ring-xtreme-yellow outline-none transition-colors"
-                  placeholder="1234"
-                />
-              </div>
-              
-              <div>
-                <label class="block text-xtreme-yellow font-heading mb-2" for="city">
-                  Stad *
-                </label>
-                <input 
-                  type="text" 
-                  id="city" 
-                  v-model="form.city"
-                  required
-                  class="w-full px-4 py-3 rounded-lg bg-xtreme-dark border border-gray-600 text-white focus:border-xtreme-yellow focus:ring-1 focus:ring-xtreme-yellow outline-none transition-colors"
-                  placeholder="Stad"
-                />
-              </div>
-            </div>
-
-            <!-- Emergency Contact -->
-            <div class="border-t border-gray-600 pt-6">
-              <h3 class="text-2xl font-heading font-bold mb-4 text-xtreme-yellow">
-                Noodcontact (voor minderjarigen verplicht)
-              </h3>
-              
-              <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label class="block text-xtreme-yellow font-heading mb-2" for="emergencyName">
-                    Naam noodcontact
-                  </label>
-                  <input 
-                    type="text" 
-                    id="emergencyName" 
-                    v-model="form.emergencyName"
-                    class="w-full px-4 py-3 rounded-lg bg-xtreme-dark border border-gray-600 text-white focus:border-xtreme-yellow focus:ring-1 focus:ring-xtreme-yellow outline-none transition-colors"
-                    placeholder="Voor- en achternaam"
-                  />
-                </div>
-                
-                <div>
-                  <label class="block text-xtreme-yellow font-heading mb-2" for="emergencyPhone">
-                    Telefoonnummer noodcontact
-                  </label>
-                  <input 
-                    type="tel" 
-                    id="emergencyPhone" 
-                    v-model="form.emergencyPhone"
-                    class="w-full px-4 py-3 rounded-lg bg-xtreme-dark border border-gray-600 text-white focus:border-xtreme-yellow focus:ring-1 focus:ring-xtreme-yellow outline-none transition-colors"
-                    placeholder="+32 123 45 67 89"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <!-- Medical Information -->
-            <div>
-              <label class="block text-xtreme-yellow font-heading mb-2" for="medicalInfo">
-                Medische informatie
-              </label>
-              <textarea 
-                id="medicalInfo" 
-                v-model="form.medicalInfo"
-                rows="3"
-                class="w-full px-4 py-3 rounded-lg bg-xtreme-dark border border-gray-600 text-white focus:border-xtreme-yellow focus:ring-1 focus:ring-xtreme-yellow outline-none transition-colors"
-                placeholder="Allergieën, medicatie, bijzonderheden..."
-              ></textarea>
-            </div>
-
             <!-- Terms and Conditions -->
             <div class="flex items-start space-x-3">
               <input 
                 type="checkbox" 
                 id="terms" 
-                v-model="form.acceptTerms"
+                name="acceptTerms"
                 required
                 class="mt-1 w-5 h-5 text-xtreme-yellow bg-xtreme-dark border-gray-600 rounded focus:ring-xtreme-yellow focus:ring-2"
               />
@@ -352,7 +225,7 @@
               <input 
                 type="checkbox" 
                 id="newsletter" 
-                v-model="form.newsletter"
+                name="newsletter"
                 class="mt-1 w-5 h-5 text-xtreme-yellow bg-xtreme-dark border-gray-600 rounded focus:ring-xtreme-yellow focus:ring-2"
               />
               <label for="newsletter" class="text-gray-300">
@@ -360,15 +233,15 @@
               </label>
             </div>
 
-            <!-- Media Consent -->
+            <!-- permissionMediaContent -->
             <div class="flex items-start space-x-3">
               <input 
                 type="checkbox" 
-                id="mediaConsent" 
-                v-model="form.mediaConsent"
+                id="permissionMediaContent" 
+                name="permissionMediaContent"
                 class="mt-1 w-5 h-5 text-xtreme-yellow bg-xtreme-dark border-gray-600 rounded focus:ring-xtreme-yellow focus:ring-2"
               />
-              <label for="mediaConsent" class="text-gray-300">
+              <label for="permissionMediaContent" class="text-gray-300">
                 Ik geef toestemming voor foto's/video's op onze sociale media kanalen.
               </label>
             </div>
@@ -377,22 +250,12 @@
             <div class="text-center pt-6">
               <button 
                 type="submit"
-                :disabled="isSubmitting"
-                class="bg-xtreme-yellow text-xtreme-black font-heading font-bold px-12 py-4 rounded-lg text-xl hover:bg-xtreme-light-yellow transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                class="bg-xtreme-yellow text-xtreme-black font-heading font-bold px-12 py-4 rounded-lg text-xl hover:bg-xtreme-light-yellow transition-colors"
               >
-                <span v-if="!isSubmitting">Inschrijving Versturen</span>
-                <span v-else>Versturen...</span>
+                Inschrijving Versturen
               </button>
             </div>
           </form>
-
-          <!-- Success Message -->
-          <div v-if="showSuccess" class="mt-6 p-4 bg-green-600 bg-opacity-20 border border-green-500 rounded-lg text-center">
-            <h3 class="text-xl font-heading font-bold text-green-400 mb-2">Inschrijving Ontvangen!</h3>
-            <p class="text-green-300">
-              Bedankt voor je inschrijving. We nemen zo snel mogelijk contact met je op voor verdere informatie.
-            </p>
-          </div>
         </div>
       </div>
     </section>
@@ -447,83 +310,6 @@
     </section>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'ContactView',
-  data() {
-    return {
-      isSubmitting: false,
-      showSuccess: false,
-      form: {
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        birthDate: '',
-        experience: 'beginner',
-        address: '',
-        postalCode: '',
-        city: '',
-        emergencyName: '',
-        emergencyPhone: '',
-        medicalInfo: '',
-        acceptTerms: false,
-        newsletter: false,
-        mediaConsent: false
-      }
-    }
-  },
-  methods: {
-    async submitForm() {
-      this.isSubmitting = true;
-      
-      try {
-        // Simuleer een API call
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        
-        // In een echte implementatie zou je hier de data naar een server sturen
-        console.log('Form submitted:', this.form);
-        
-        // Reset form
-        this.resetForm();
-        this.showSuccess = true;
-        
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-          this.showSuccess = false;
-        }, 5000);
-        
-      } catch (error) {
-        console.error('Error submitting form:', error);
-        alert('Er is een fout opgetreden. Probeer het opnieuw.');
-      } finally {
-        this.isSubmitting = false;
-      }
-    },
-    
-    resetForm() {
-      this.form = {
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        birthDate: '',
-        experience: 'beginner',
-        address: '',
-        postalCode: '',
-        city: '',
-        emergencyName: '',
-        emergencyPhone: '',
-        medicalInfo: '',
-        acceptTerms: false,
-        newsletter: false,
-        mediaConsent: false
-      }
-    }
-  }
-}
-</script>
 
 <style scoped>
 .ice-card {
