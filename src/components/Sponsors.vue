@@ -52,6 +52,8 @@
 </template>
 
 <script>
+import GeertMichielsLogo from '@/assets/Images/Sponsors/Geert_Michiels.png';
+
 export default {
   name: 'Sponsors',
   data() {
@@ -60,7 +62,7 @@ export default {
         {
           name: 'Grondwerken Geert Michiels',
           type: 'Hoofdsponsor',
-          logo: '/src/assets/Images/sponsors/Geert_Michiels.png'
+          logo: GeertMichielsLogo
         },
       ]
     }
