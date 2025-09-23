@@ -126,8 +126,8 @@
     <!-- Call to Action Section -->
     <section class="py-16 px-4 bg-gradient-to-r from-xtreme-dark via-xtreme-dark to-xtreme-dark bg-opacity-80">
       <div class="max-w-6xl mx-auto">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div class="text-center lg:text-left">
+        <div class="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
+          <div class="order-2 lg:order-1 text-center lg:text-left">
             <h2 class="text-4xl lg:text-5xl font-heading font-bold mb-6 text-xtreme-yellow">
               Klaar om te Beginnen?
             </h2>
@@ -149,7 +149,7 @@
               </router-link>
             </div>
           </div>
-          <div class="flex justify-center lg:justify-end">
+          <div class="order-1 lg:order-2 flex justify-center lg:justify-end mb-8 lg:mb-0">
             <div class="relative cta-image-container ice-card">
               <img 
                 src="@/assets/Images/professional-pictures/IMG_4086.JPG" 

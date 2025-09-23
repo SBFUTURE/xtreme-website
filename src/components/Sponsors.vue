@@ -21,7 +21,10 @@
               v-if="sponsor.logo"
               :src="sponsor.logo" 
               :alt="sponsor.name + ' logo'" 
-              class="max-h-28 max-w-full object-contain transition-all duration-300 group-hover:scale-105"
+              :class="[
+                'sponsor-logo transition-all duration-300 group-hover:scale-105',
+                sponsor.name === 'Andy Du Bois' || sponsor.name === 'B-Tech Security' || sponsor.name === 'Gloss & Gossip' ? 'sponsor-logo-large' : ''
+              ]"
             />
             <div v-else class="text-xtreme-yellow font-bold text-lg text-center">
               {{ sponsor.name }}
@@ -52,7 +55,14 @@
 </template>
 
 <script>
+
 import GeertMichielsLogo from '@/assets/Images/Sponsors/Geert_Michiels.png';
+import AndyDuBoisLogo from '@/assets/Images/Sponsors/AndyDuBois.jpg';
+import BTechSecurityLogo from '@/assets/Images/Sponsors/B-Tech-Security.jpg';
+import CBITLogo from '@/assets/Images/Sponsors/CB_IT.png';
+import DJBOMBEKOLogo from '@/assets/Images/Sponsors/DJ_BOMBEKO_BLACK.png';
+import GlossGossipLogo from '@/assets/Images/Sponsors/Gloss&Gossip.png';
+import Tblade from '@/assets/Images/Sponsors/t-blade-logo.png';
 
 export default {
   name: 'Sponsors',
@@ -60,9 +70,39 @@ export default {
     return {
       sponsors: [
         {
+          name: 't-blade',
+          type: 'Hoofdsponsor',
+          logo: Tblade
+        },
+        {
           name: 'Grondwerken Geert Michiels',
           type: 'Hoofdsponsor',
           logo: GeertMichielsLogo
+        },
+        {
+          name: 'Andy Du Bois',
+          type: 'Hoofdsponsor',
+          logo: AndyDuBoisLogo
+        },
+        {
+          name: 'B-Tech Security',
+          type: 'Hoofdsponsor',
+          logo: BTechSecurityLogo
+        },
+        {
+          name: 'CB IT',
+          type: 'Sponsor',
+          logo: CBITLogo
+        },
+        {
+          name: 'DJ BOMBEKO',
+          type: 'Sponsor',
+          logo: DJBOMBEKOLogo
+        },
+        {
+          name: 'Gloss & Gossip',
+          type: 'Sponsor',
+          logo: GlossGossipLogo
         },
       ]
     }
@@ -78,6 +118,7 @@ export default {
   max-width: 320px;
 }
 
+
 .ice-card-sponsor {
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(4px);
@@ -85,11 +126,29 @@ export default {
   border-radius: 0.75rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  padding: 0.75rem;
-  height: 9rem;
+  padding: 1.25rem;
+  height: 12rem;
+  min-width: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+.sponsor-logo {
+  max-height: 8rem;
+  min-height: 4rem;
+  max-width: 90%;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+.sponsor-logo-large {
+  max-height: 11rem !important;
+  min-height: 6rem !important;
+  max-width: 100% !important;
 }
 
 .ice-card-sponsor:hover {
@@ -116,35 +175,65 @@ export default {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-  .sponsor-card {
-    min-width: 240px;
-    max-width: 280px;
-  }
-  
+
+
+@media (max-width: 1024px) {
   .ice-card-sponsor {
-    padding: 0.5rem;
-    height: 7rem;
+    height: 9rem;
+    padding: 1rem;
   }
-  
-  .sponsor-card img {
+  .sponsor-logo {
     max-height: 6rem;
+    min-height: 3rem;
+  }
+  .sponsor-logo-large {
+    max-height: 8rem !important;
+    min-height: 4rem !important;
   }
 }
 
+
+@media (max-width: 768px) {
+  .sponsor-card {
+    min-width: 180px;
+    max-width: 220px;
+  }
+  .ice-card-sponsor {
+    height: 7rem;
+    padding: 0.75rem;
+  }
+  .sponsor-logo {
+    max-height: 4rem;
+    min-height: 2rem;
+  }
+  .sponsor-logo-large {
+    max-height: 5.5rem !important;
+    min-height: 2.5rem !important;
+  }
+}
+
+
+
 @media (max-width: 480px) {
   .sponsor-card {
-    min-width: 200px;
-    max-width: 240px;
+    min-width: 140px;
+    max-width: 180px;
   }
-  
   .ice-card-sponsor {
+    height: 7rem;
     padding: 0.5rem;
-    height: 6rem;
   }
-  
-  .sponsor-card img {
-    max-height: 5rem;
+  .sponsor-logo {
+    max-height: 4rem;
+    min-height: 2rem;
+    max-width: 95%;
+    object-fit: scale-down;
+  }
+  .sponsor-logo-large {
+    max-height: 6rem !important;
+    min-height: 2.5rem !important;
+    max-width: 100% !important;
+    object-fit: scale-down !important;
   }
 }
 </style>
