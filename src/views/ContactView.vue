@@ -215,7 +215,7 @@
                 class="mt-1 w-5 h-5 text-xtreme-yellow bg-xtreme-dark border-gray-600 rounded focus:ring-xtreme-yellow focus:ring-2"
               />
               <label for="terms" class="text-gray-300">
-                Ik ga akkoord met de <a href="#" class="text-xtreme-yellow hover:text-xtreme-light-yellow">algemene voorwaarden</a> 
+                Ik ga akkoord met de <router-link to="/algemene-voorwaarden" class="text-xtreme-yellow hover:text-xtreme-light-yellow">algemene voorwaarden</router-link> 
                 en het <router-link to="/privacybeleid" class="text-xtreme-yellow hover:text-xtreme-light-yellow">privacybeleid</router-link> van Xtreme On Ice. *
               </label>
             </div>

@@ -124,9 +124,9 @@
             <router-link to="/privacybeleid" class="text-gray-400 hover:text-xtreme-yellow transition-colors duration-300">
               Privacybeleid
             </router-link>
-            <a href="#" class="text-gray-400 hover:text-xtreme-yellow transition-colors duration-300">
+            <router-link to="/algemene-voorwaarden" class="text-gray-400 hover:text-xtreme-yellow transition-colors duration-300">
               Algemene Voorwaarden
-            </a>
+            </router-link>
           </div>
         </div>
       </div>

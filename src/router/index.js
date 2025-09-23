@@ -62,6 +62,11 @@ const router = createRouter({
       component: () => import('@/views/PrivacyBeleidView.vue')
     },
     {
+      path: '/algemene-voorwaarden',
+      name: 'algemene-voorwaarden',
+      component: () => import('@/views/AlgemeneVoorwaardenView.vue')
+    },
+    {
       path: '/success',
       name: 'success',
       component: () => import('@/views/SuccessView.vue')
