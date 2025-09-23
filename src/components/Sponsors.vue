@@ -216,24 +216,22 @@ export default {
 
 @media (max-width: 480px) {
   .sponsor-card {
-    min-width: 140px;
-    max-width: 180px;
+    min-width: 160px;
+    max-width: 220px;
   }
   .ice-card-sponsor {
     height: 7rem;
-    padding: 0.5rem;
+    padding: 0.7rem;
   }
   .sponsor-logo {
-    max-height: 4rem;
-    min-height: 2rem;
+    max-height: 4.2rem;
+    min-height: 2.2rem;
     max-width: 95%;
-    object-fit: scale-down;
   }
   .sponsor-logo-large {
-    max-height: 6rem !important;
+    max-height: 5.5rem !important;
     min-height: 2.5rem !important;
     max-width: 100% !important;
-    object-fit: scale-down !important;
   }
 }
 </style>
