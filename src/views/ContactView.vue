@@ -216,7 +216,7 @@
               />
               <label for="terms" class="text-gray-300">
                 Ik ga akkoord met de <a href="#" class="text-xtreme-yellow hover:text-xtreme-light-yellow">algemene voorwaarden</a> 
-                en het <a href="#" class="text-xtreme-yellow hover:text-xtreme-light-yellow">privacybeleid</a> van Xtreme On Ice. *
+                en het <router-link to="/privacybeleid" class="text-xtreme-yellow hover:text-xtreme-light-yellow">privacybeleid</router-link> van Xtreme On Ice. *
               </label>
             </div>
 

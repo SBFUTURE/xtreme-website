@@ -116,12 +116,14 @@
       <div class="border-t border-gray-700 mt-8 pt-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <p class="text-gray-400 text-sm mb-4 md:mb-0">
-            © {{ new Date().getFullYear() }} Xtreme On Ice. Alle rechten voorbehouden.
+            © {{ new Date().getFullYear() }}
+            <a href="https://stephen-bombeke.be/" target="_blank" rel="noopener noreferrer" class="underline hover:text-xtreme-yellow">Stephen Bombeke</a>.
+            Alle rechten voorbehouden.
           </p>
           <div class="flex space-x-4 text-sm">
-            <a href="#" class="text-gray-400 hover:text-xtreme-yellow transition-colors duration-300">
+            <router-link to="/privacybeleid" class="text-gray-400 hover:text-xtreme-yellow transition-colors duration-300">
               Privacybeleid
-            </a>
+            </router-link>
             <a href="#" class="text-gray-400 hover:text-xtreme-yellow transition-colors duration-300">
               Algemene Voorwaarden
             </a>
