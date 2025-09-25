@@ -56,13 +56,6 @@
 
 <script>
 
-import GeertMichielsLogo from '@/assets/Images/Sponsors/Geert_Michiels.png';
-import AndyDuBoisLogo from '@/assets/Images/Sponsors/AndyDuBois.jpg';
-import BTechSecurityLogo from '@/assets/Images/Sponsors/B-Tech-Security.jpg';
-import CBITLogo from '@/assets/Images/Sponsors/CB_IT.png';
-import DJBOMBEKOLogo from '@/assets/Images/Sponsors/DJ_BOMBEKO_BLACK.png';
-import GlossGossipLogo from '@/assets/Images/Sponsors/Gloss&Gossip.png';
-import Tblade from '@/assets/Images/Sponsors/t-blade-logo.png';
 
 export default {
   name: 'Sponsors',
@@ -72,37 +65,37 @@ export default {
         {
           name: 't-blade',
           type: 'Hoofdsponsor',
-          logo: Tblade
+          logo: '/Images/Sponsors/t-blade-logo.png'
         },
         {
           name: 'Grondwerken Geert Michiels',
           type: 'Hoofdsponsor',
-          logo: GeertMichielsLogo
+          logo: '/Images/Sponsors/Geert_Michiels.png'
         },
         {
           name: 'Andy Du Bois',
           type: 'Hoofdsponsor',
-          logo: AndyDuBoisLogo
+          logo: '/Images/Sponsors/AndyDuBois.jpg'
         },
         {
           name: 'B-Tech Security',
           type: 'Hoofdsponsor',
-          logo: BTechSecurityLogo
+          logo: '/Images/Sponsors/B-Tech-Security.jpg'
         },
         {
           name: 'CB IT',
           type: 'Sponsor',
-          logo: CBITLogo
+          logo: '/Images/Sponsors/CB_IT.png'
         },
         {
           name: 'DJ BOMBEKO',
           type: 'Sponsor',
-          logo: DJBOMBEKOLogo
+          logo: '/Images/Sponsors/DJ_BOMBEKO_BLACK.png'
         },
         {
           name: 'Gloss & Gossip',
           type: 'Sponsor',
-          logo: GlossGossipLogo
+          logo: '/Images/Sponsors/Gloss&Gossip.png'
         },
       ]
     }

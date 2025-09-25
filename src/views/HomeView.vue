@@ -8,7 +8,7 @@
       <!-- Background Image -->
       <div class="absolute inset-0 z-0">
         <img 
-          src="@/assets/Images/professional-pictures/IMG_4083.JPG" 
+          src="/Images/professional-pictures/IMG_4083.JPG" 
           alt="Xtreme On Ice Training" 
           class="w-full h-full object-cover"
         />
@@ -25,7 +25,7 @@
             <div class="relative">
               <div class="bg-black bg-opacity-40 rounded-full p-4 backdrop-blur-sm border-2 border-xtreme-yellow">
                 <img 
-                  src="@/assets/Images/XtremeLogo.jpg" 
+                  src="/Images/XtremeLogo.jpg" 
                   alt="Xtreme On Ice Logo" 
                   class="w-72 h-72 lg:w-80 lg:h-80 rounded-full shadow-ice frost-sparkle"
                 />
@@ -152,7 +152,7 @@
           <div class="order-1 lg:order-2 flex justify-center lg:justify-end mb-8 lg:mb-0">
             <div class="relative cta-image-container ice-card">
               <img 
-                src="@/assets/Images/professional-pictures/IMG_4086.JPG" 
+                src="/Images/professional-pictures/IMG_4086.JPG" 
                 alt="Schaatsen bij Xtreme On Ice, training en plezier voor iedereen" 
                 class="w-full h-80 object-cover rounded-xl transition-all duration-300 hover:scale-105"
               />

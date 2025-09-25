@@ -34,7 +34,7 @@
           
           <div class="flex justify-center">
             <img 
-              src="@/assets/Images/XtremeLogo.jpg" 
+              src="/Images/XtremeLogo.jpg" 
               alt="Xtreme On Ice Logo" 
               class="w-64 h-64 rounded-full shadow-ice border-4 border-xtreme-yellow animate-float"
             />

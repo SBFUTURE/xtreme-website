@@ -6,7 +6,7 @@
         <div class="lg:col-span-2">
           <div class="flex items-center mb-4">
             <img 
-              src="@/assets/Images/XtremeLogo.jpg" 
+              src="/Images/XtremeLogo.jpg" 
               alt="Xtreme On Ice Logo" 
               class="w-12 h-12 rounded-full mr-3"
             />

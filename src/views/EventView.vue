@@ -37,7 +37,7 @@
           <div class="relative overflow-hidden rounded-2xl bg-black group cursor-pointer">
             <div class="relative h-[400px] lg:h-[500px]">
               <img 
-                src="/src/assets/Images/2025-Xtreme-Night-5/IMG_6260.JPG"
+                src="/Images/2025-Xtreme-Night-5/IMG_6260.JPG"
                 alt="Xtreme Night 5 evenement" 
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -132,7 +132,7 @@ const events = ref([
     title: 'Xtreme Night 5',
     year: '2025',
     shortDescription: 'Ons eigen georganiseerde spectaculaire schaatsevenement',
-    mainImage: '/src/assets/Images/2025-Xtreme-Night-5/IMG_6260.JPG',
+  mainImage: '/Images/2025-Xtreme-Night-5/IMG_6260.JPG',
     imageCount: 3
   },
   {
@@ -140,7 +140,7 @@ const events = ref([
     title: 'Val Thorens Trip',
     year: '2024',
     shortDescription: 'Onvergetelijke wintersportervaring in de Franse Alpen',
-    mainImage: '/src/assets/Images/2024-Val-Thorens/PaulComShoot109.jpg',
+  mainImage: '/Images/2024-Val-Thorens/PaulComShoot109.jpg',
     imageCount: 10
   },
   {
@@ -148,7 +148,7 @@ const events = ref([
     title: 'Polarion Evenement',
     year: '2024',
     shortDescription: 'Spektakulaire show met freestyle en artistieke elementen',
-    mainImage: '/src/assets/Images/2024-Polarion/IMG_4117_Freestyle Night-18april.JPG',
+  mainImage: '/Images/2024-Polarion/IMG_4117_Freestyle Night-18april.JPG',
     imageCount: 9
   },
   {
@@ -156,7 +156,7 @@ const events = ref([
     title: 'Oostenrijk Trip',
     year: '2025',
     shortDescription: 'Recente reis naar de Oostenrijkse bergen',
-    mainImage: '/src/assets/Images/2025-Oostenrijk/IMG_6042.JPG',
+  mainImage: '/Images/2025-Oostenrijk/IMG_6042.JPG',
     imageCount: 9
   }
 ])

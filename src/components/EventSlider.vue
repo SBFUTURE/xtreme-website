@@ -116,7 +116,7 @@ export default {
           title: 'Xtreme Night 5',
           year: '2025',
           description: 'Onze vijfde editie van Xtreme Night was een groot succes! Een avond vol spectaculaire optredens, geweldige sfeer en onvergetelijke momenten op het ijs.',
-          mainImage: '/src/assets/Images/2025-Xtreme-Night-5/IMG_6260.JPG',
+          mainImage: '/Images/2025-Xtreme-Night-5/IMG_6260.JPG',
           isOwnEvent: true
         },
         {
@@ -124,7 +124,7 @@ export default {
           title: 'Polarion Evenement',
           year: '2024',
           description: 'Spektakulaire show met freestyle en artistieke elementen. Een professionele demonstratie van onze vaardigheden op het ijs.',
-          mainImage: '/src/assets/Images/2024-Polarion/IMG_4117_Freestyle Night-18april.JPG',
+          mainImage: '/Images/2024-Polarion/IMG_4117_Freestyle Night-18april.JPG',
           isOwnEvent: false
         },
         {
@@ -132,7 +132,7 @@ export default {
           title: 'Val Thorens Trip',
           year: '2024',
           description: 'Onvergetelijke wintersportervaring in de Franse Alpen. Een geweldige trip vol avontuur en kameraadschap.',
-          mainImage: '/src/assets/Images/2024-Val-Thorens/PaulComShoot110.jpg',
+          mainImage: '/Images/2024-Val-Thorens/PaulComShoot110.jpg',
           isOwnEvent: false
         },
         {
@@ -140,7 +140,7 @@ export default {
           title: 'Oostenrijk Trip',
           year: '2025',
           description: 'Recente reis naar de Oostenrijkse bergen. Prachtige locaties en onvergetelijke momenten met het team.',
-          mainImage: '/src/assets/Images/2025-Oostenrijk/IMG_6042.JPG',
+          mainImage: '/Images/2025-Oostenrijk/IMG_6042.JPG',
           isOwnEvent: false
         }
       ]
