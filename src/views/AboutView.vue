@@ -22,7 +22,7 @@
             </h2>
             <p class="text-gray-300 leading-relaxed mb-4">
               Xtreme On Ice is ontstaan uit een passie voor schaatsen en de wens om deze sport toegankelijk 
-              te maken voor iedereen in Liezele en omgeving. Sinds onze oprichting zijn we uitgegroeid tot 
+              te maken voor iedereen in Liedekerke en omgeving. Sinds onze oprichting zijn we uitgegroeid tot 
               een gerespecteerde ijsvereniging die bekend staat om zijn professionele begeleiding en 
               gezellige sfeer.
             </p>
