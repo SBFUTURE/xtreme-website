@@ -125,49 +125,27 @@ export default {
     }
 
     const createICSFile = (trainings) => {
-      let icsContent = `BEGIN:VCALENDAR
-VERSION:2.0
-PRODID:-//Xtreme on Ice//Calendar//EN
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
-X-WR-CALNAME:Xtreme on Ice Training Schema
-X-WR-CALDESC:Alle trainingen en evenementen van Xtreme on Ice
-X-WR-TIMEZONE:Europe/Brussels
-`
+      let icsContent = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//Xtreme on Ice//Calendar//EN\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH\nX-WR-CALNAME:Xtreme on Ice Training Schema\nX-WR-CALDESC:Alle trainingen en evenementen van Xtreme on Ice\nX-WR-TIMEZONE:Europe/Brussels\n`;
 
       trainings.forEach((training, index) => {
-        const startTime = new Date(`${training.date}T${training.time.split('-')[0]}:00`)
-        const endTime = new Date(`${training.date}T${training.time.split('-')[1]}:00`)
-        
-        icsContent += `BEGIN:VEVENT
-UID:${Date.now()}-${index}@xtremeonice.be
-DTSTAMP:${formatDateForCalendar(new Date())}
-DTSTART:${formatDateForCalendar(startTime)}
-DTEND:${formatDateForCalendar(endTime)}
-SUMMARY:Xtreme on Ice - ${training.title}
-DESCRIPTION:Xtreme on Ice ${training.title}${training.note ? ` - ${training.note}` : ''}
-LOCATION:${training.note || 'Xtreme on Ice'}
-CATEGORIES:SPORTS,ICE SKATING
-STATUS:CONFIRMED
-TRANSP:OPAQUE
-END:VEVENT
-`
-      })
+        const startTime = new Date(`${training.date}T${training.time.split('-')[0]}:00`);
+        const endTime = new Date(`${training.date}T${training.time.split('-')[1]}:00`);
+        icsContent += `BEGIN:VEVENT\nUID:${Date.now()}-${index}@xtremeonice.be\nDTSTAMP:${formatDateForCalendar(new Date())}\nDTSTART:${formatDateForCalendar(startTime)}\nDTEND:${formatDateForCalendar(endTime)}\nSUMMARY:Xtreme on Ice - ${training.title}\nDESCRIPTION:Xtreme on Ice ${training.title}${training.note ? ` - ${training.note}` : ''}\nLOCATION:${training.note || 'Xtreme on Ice'}\nCATEGORIES:SPORTS,ICE SKATING\nSTATUS:CONFIRMED\nTRANSP:OPAQUE\nEND:VEVENT\n`;
+      });
 
-      icsContent += 'END:VCALENDAR'
+      icsContent += 'END:VCALENDAR';
 
-  // Create and download the file (cross-browser)
-  const blob = new Blob([icsContent], { type: 'application/octet-stream' })
-  const url = URL.createObjectURL(blob)
-  const filename = 'xtreme-on-ice-trainingen-2025-2026.ics'
-  // Try using the anchor method
-  const link = document.createElement('a')
-  link.href = url
-  link.download = filename
-  document.body.appendChild(link)
-  link.click()
-  document.body.removeChild(link)
-  setTimeout(() => URL.revokeObjectURL(url), 1000)
+      // Create and download the file (universal method)
+      const blob = new Blob([icsContent.replace(/\\n/g, '\n')], { type: 'text/calendar' });
+      const url = URL.createObjectURL(blob);
+      const filename = 'xtreme-on-ice-trainingen-2025-2026.ics';
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
     }
 
     return {
