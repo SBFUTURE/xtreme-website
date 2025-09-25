@@ -153,7 +153,7 @@
             <div class="relative cta-image-container ice-card">
               <img 
                 src="@/assets/Images/professional-pictures/IMG_4086.JPG" 
-                alt="Schaatsen bij Xtreme On Ice" 
+                alt="Schaatsen bij Xtreme On Ice, training en plezier voor iedereen" 
                 class="w-full h-80 object-cover rounded-xl transition-all duration-300 hover:scale-105"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent rounded-xl"></div>
@@ -182,6 +182,23 @@ export default {
     AnnouncementBanner
   }
 }
+</script>
+
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  document.title = 'Xtreme On Ice - Schaatsclub | Trainingen, Events & Community';
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) {
+    metaDescription.setAttribute('content', 'Sluit je aan bij Xtreme On Ice en ervaar de opwinding van schaatsen in een professionele en vriendelijke omgeving. Bekijk het trainingsschema, evenementen en word lid van onze community.');
+  } else {
+    const meta = document.createElement('meta');
+    meta.name = 'description';
+    meta.content = 'Sluit je aan bij Xtreme On Ice en ervaar de opwinding van schaatsen in een professionele en vriendelijke omgeving. Bekijk het trainingsschema, evenementen en word lid van onze community.';
+    document.head.appendChild(meta);
+  }
+})
 </script>
 
 <style scoped>

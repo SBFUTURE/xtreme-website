@@ -62,10 +62,21 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'AboutView'
-}
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  document.title = 'Over Xtreme On Ice | Geschiedenis & Missie';
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) {
+    metaDescription.setAttribute('content', 'Lees alles over de geschiedenis, missie en waarden van Xtreme On Ice. Ontdek waarom onze ijsvereniging uniek is in België.');
+  } else {
+    const meta = document.createElement('meta');
+    meta.name = 'description';
+    meta.content = 'Lees alles over de geschiedenis, missie en waarden van Xtreme On Ice. Ontdek waarom onze ijsvereniging uniek is in België.';
+    document.head.appendChild(meta);
+  }
+})
 </script>
 
 <style scoped>

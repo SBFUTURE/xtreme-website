@@ -122,7 +122,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import AnnouncementBanner from '@/components/AnnouncementBanner.vue'
 
 // Event data with fixed image paths
@@ -164,6 +164,20 @@ const events = ref([
 // Computed property for other events (excluding Xtreme Night 5)
 const otherEvents = computed(() => {
   return events.value.filter(event => event.id !== 'xtreme-night-5')
+})
+
+// SEO Meta Tags
+onMounted(() => {
+  document.title = 'Evenementen bij Xtreme On Ice | Schaatsactiviteiten & Events';
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) {
+    metaDescription.setAttribute('content', 'Ontdek alle evenementen en schaatsactiviteiten van Xtreme On Ice. Doe mee aan onze events en beleef het plezier op het ijs!');
+  } else {
+    const meta = document.createElement('meta');
+    meta.name = 'description';
+    meta.content = 'Ontdek alle evenementen en schaatsactiviteiten van Xtreme On Ice. Doe mee aan onze events en beleef het plezier op het ijs!';
+    document.head.appendChild(meta);
+  }
 })
 </script>
 

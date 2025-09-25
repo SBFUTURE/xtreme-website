@@ -311,6 +311,23 @@
   </div>
 </template>
 
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  document.title = 'Contact Xtreme On Ice | Vragen & Inschrijven';
+  const metaDescription = document.querySelector('meta[name="description"]');
+  if (metaDescription) {
+    metaDescription.setAttribute('content', 'Neem contact op met Xtreme On Ice voor vragen, inschrijvingen of meer informatie over onze schaatsvereniging en trainingen.');
+  } else {
+    const meta = document.createElement('meta');
+    meta.name = 'description';
+    meta.content = 'Neem contact op met Xtreme On Ice voor vragen, inschrijvingen of meer informatie over onze schaatsvereniging en trainingen.';
+    document.head.appendChild(meta);
+  }
+})
+</script>
+
 <style scoped>
 .ice-card {
   background: rgba(26, 26, 26, 0.8);
