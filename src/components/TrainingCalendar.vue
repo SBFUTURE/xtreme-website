@@ -156,16 +156,18 @@ END:VEVENT
 
       icsContent += 'END:VCALENDAR'
 
-      // Create and download the file
-      const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' })
-      const url = URL.createObjectURL(blob)
-      const link = document.createElement('a')
-      link.href = url
-      link.download = 'xtreme-on-ice-trainingen-2025-2026.ics'
-      document.body.appendChild(link)
-      link.click()
-      document.body.removeChild(link)
-      URL.revokeObjectURL(url)
+  // Create and download the file (cross-browser)
+  const blob = new Blob([icsContent], { type: 'application/octet-stream' })
+  const url = URL.createObjectURL(blob)
+  const filename = 'xtreme-on-ice-trainingen-2025-2026.ics'
+  // Try using the anchor method
+  const link = document.createElement('a')
+  link.href = url
+  link.download = filename
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+  setTimeout(() => URL.revokeObjectURL(url), 1000)
     }
 
     return {
