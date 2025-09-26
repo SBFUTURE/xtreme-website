@@ -8,6 +8,19 @@
 </template>
 
 <script setup>
+// Add canonical tag for SEO
+if (typeof window !== 'undefined') {
+  const canonicalUrl = 'https://xtremeonice.be/trainingskalender';
+  let link = document.querySelector('link[rel="canonical"]');
+  if (!link) {
+    link = document.createElement('link');
+    link.rel = 'canonical';
+    link.href = canonicalUrl;
+    document.head.appendChild(link);
+  } else {
+    link.href = canonicalUrl;
+  }
+}
 import { onMounted } from 'vue'
 import TrainingCalendar from '@/components/TrainingCalendar.vue'
 

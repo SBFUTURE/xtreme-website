@@ -122,6 +122,19 @@
 </template>
 
 <script setup>
+// Add canonical tag for SEO
+if (typeof window !== 'undefined') {
+  const canonicalUrl = 'https://xtremeonice.be/events';
+  let link = document.querySelector('link[rel="canonical"]');
+  if (!link) {
+    link = document.createElement('link');
+    link.rel = 'canonical';
+    link.href = canonicalUrl;
+    document.head.appendChild(link);
+  } else {
+    link.href = canonicalUrl;
+  }
+}
 import { ref, computed, onMounted } from 'vue'
 import AnnouncementBanner from '@/components/AnnouncementBanner.vue'
 

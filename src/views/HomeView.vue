@@ -186,6 +186,20 @@ export default {
 
 <script setup>
 import { onMounted } from 'vue'
+// Add canonical tag for SEO
+if (typeof window !== 'undefined') {
+  const canonicalUrl = 'https://xtremeonice.be/';
+  let link = document.querySelector('link[rel="canonical"]');
+  if (!link) {
+    link = document.createElement('link');
+    link.rel = 'canonical';
+    link.href = canonicalUrl;
+    document.head.appendChild(link);
+  } else {
+    link.href = canonicalUrl;
+  }
+}
+
 
 onMounted(() => {
   document.title = 'Xtreme On Ice - Schaatsclub | Trainingen, Events & Community';
