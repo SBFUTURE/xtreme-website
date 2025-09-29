@@ -68,6 +68,11 @@ export default {
           logo: '/Images/Sponsors/t-blade-logo.png'
         },
         {
+          name: 'Juri',
+          type: 'Hoofdsponsor',
+          logo: '/Images/Sponsors/Juri_Logo.svg'
+        },
+        {
           name: 'Grondwerken Geert Michiels',
           type: 'Hoofdsponsor',
           logo: '/Images/Sponsors/Geert_Michiels.png'
