@@ -7,9 +7,9 @@
           <p class="font-heading font-bold text-sm md:text-base lg:text-lg xl:text-xl">
             <span class="text-red-600">NIEUW EVENEMENT!</span> 
             <span class="mx-1 md:mx-2">•</span>
-            <span class="text-black">XTREME NIGHT 6</span>
+            <span class="text-black">XTREME NIGHT 7</span>
             <span class="mx-1 md:mx-2">•</span>
-            <span class="text-red-600">21 FEBRUARI 2026</span>
+            <span class="text-red-600">20 Maart 2027</span>
           </p>
           <p class="text-xs md:text-sm font-medium mt-0.5 md:mt-1 text-gray-800 hidden sm:block">
             Mis de meest spectaculaire ijsshow van het jaar niet! Tickets binnenkort beschikbaar.
