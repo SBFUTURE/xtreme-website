@@ -5,6 +5,7 @@ import EventView from '@/views/EventView.vue'
 import EventDetailView from '@/views/EventDetailView.vue'
 import ContactView from '@/views/ContactView.vue'
 import TrainingSchemaView from '@/views/TrainingSchemaView.vue'
+import TournamentOverviewView from '@/views/TournamentOverviewView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -55,6 +56,11 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: ContactView
+    },
+    {
+      path: '/toernooien',
+      name: 'toernooien',
+      component: TournamentOverviewView
     },
     {
       path: '/privacybeleid',

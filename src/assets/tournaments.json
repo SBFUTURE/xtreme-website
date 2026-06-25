@@ -1,0 +1,998 @@
+[
+  {
+    "id": "tn-2026-01",
+    "name": "Winter Jump Open",
+    "date": "2026-11-14",
+    "location": "Liedekerke Ice Arena",
+    "disciplines": [
+      {
+        "name": "Hoogspringen",
+        "categories": {
+          "Heren +16": {
+            "participants": 12,
+            "topScore": 195,
+            "avgScore": 162,
+            "results": [
+              {
+                "name": "Jefke Vermatsen",
+                "score": 195
+              },
+              {
+                "name": "Pieter Janssens",
+                "score": 187
+              },
+              {
+                "name": "Sofie De Wilde",
+                "score": 180
+              }
+            ]
+          },
+          "Heren -16": {
+            "participants": 8,
+            "topScore": 178,
+            "avgScore": 150,
+            "results": [
+              {
+                "name": "Lars Maes",
+                "score": 178
+              },
+              {
+                "name": "Emma Peeters",
+                "score": 170
+              },
+              {
+                "name": "Thomas Jacobs",
+                "score": 163
+              }
+            ]
+          },
+          "Dames +16": {
+            "participants": 10,
+            "topScore": 182,
+            "avgScore": 155,
+            "results": [
+              {
+                "name": "Nina Verhoeven",
+                "score": 182
+              },
+              {
+                "name": "Mats Claes",
+                "score": 174
+              },
+              {
+                "name": "Lotte Willems",
+                "score": 167
+              }
+            ]
+          },
+          "Dames -16": {
+            "participants": 6,
+            "topScore": 168,
+            "avgScore": 140,
+            "results": [
+              {
+                "name": "Kobe Simons",
+                "score": 168
+              },
+              {
+                "name": "Fien Cornelissen",
+                "score": 160
+              },
+              {
+                "name": "Arne Martins",
+                "score": 153
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Hoogspringen met schans",
+        "categories": {
+          "Heren +16": {
+            "participants": 10,
+            "topScore": 205,
+            "avgScore": 170,
+            "results": [
+              {
+                "name": "Emma Peeters",
+                "score": 205
+              },
+              {
+                "name": "Thomas Jacobs",
+                "score": 197
+              },
+              {
+                "name": "Nina Verhoeven",
+                "score": 190
+              }
+            ]
+          },
+          "Heren -16": {
+            "participants": 7,
+            "topScore": 186,
+            "avgScore": 152,
+            "results": [
+              {
+                "name": "Mats Claes",
+                "score": 186
+              },
+              {
+                "name": "Lotte Willems",
+                "score": 178
+              },
+              {
+                "name": "Kobe Simons",
+                "score": 171
+              }
+            ]
+          },
+          "Dames +16": {
+            "participants": 9,
+            "topScore": 190,
+            "avgScore": 160,
+            "results": [
+              {
+                "name": "Fien Cornelissen",
+                "score": 190
+              },
+              {
+                "name": "Arne Martins",
+                "score": 182
+              },
+              {
+                "name": "Jefke Vermatsen",
+                "score": 175
+              }
+            ]
+          },
+          "Dames -16": {
+            "participants": 5,
+            "topScore": 173,
+            "avgScore": 145,
+            "results": [
+              {
+                "name": "Pieter Janssens",
+                "score": 173
+              },
+              {
+                "name": "Sofie De Wilde",
+                "score": 165
+              },
+              {
+                "name": "Lars Maes",
+                "score": 158
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Verspringen",
+        "categories": {
+          "Heren +16": {
+            "participants": 11,
+            "topScore": 620,
+            "avgScore": 540,
+            "results": [
+              {
+                "name": "Lotte Willems",
+                "score": 620
+              },
+              {
+                "name": "Kobe Simons",
+                "score": 612
+              },
+              {
+                "name": "Fien Cornelissen",
+                "score": 605
+              }
+            ]
+          },
+          "Heren -16": {
+            "participants": 9,
+            "topScore": 590,
+            "avgScore": 510,
+            "results": [
+              {
+                "name": "Arne Martins",
+                "score": 590
+              },
+              {
+                "name": "Jefke Vermatsen",
+                "score": 582
+              },
+              {
+                "name": "Pieter Janssens",
+                "score": 575
+              }
+            ]
+          },
+          "Dames +16": {
+            "participants": 8,
+            "topScore": 580,
+            "avgScore": 500,
+            "results": [
+              {
+                "name": "Sofie De Wilde",
+                "score": 580
+              },
+              {
+                "name": "Lars Maes",
+                "score": 572
+              },
+              {
+                "name": "Emma Peeters",
+                "score": 565
+              }
+            ]
+          },
+          "Dames -16": {
+            "participants": 4,
+            "topScore": 545,
+            "avgScore": 470,
+            "results": [
+              {
+                "name": "Thomas Jacobs",
+                "score": 545
+              },
+              {
+                "name": "Nina Verhoeven",
+                "score": 537
+              },
+              {
+                "name": "Mats Claes",
+                "score": 530
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Ice Cross",
+        "categories": {
+          "Heren +16": {
+            "participants": 14,
+            "topScore": 1,
+            "avgScore": 0,
+            "results": [
+              {
+                "name": "Jefke Vermatsen",
+                "score": 1
+              },
+              {
+                "name": "Pieter Janssens",
+                "score": 0
+              },
+              {
+                "name": "Sofie De Wilde",
+                "score": 0
+              }
+            ]
+          },
+          "Heren -16": {
+            "participants": 10,
+            "topScore": 1,
+            "avgScore": 0,
+            "results": [
+              {
+                "name": "Lars Maes",
+                "score": 1
+              },
+              {
+                "name": "Emma Peeters",
+                "score": 0
+              },
+              {
+                "name": "Thomas Jacobs",
+                "score": 0
+              }
+            ]
+          },
+          "Dames +16": {
+            "participants": 7,
+            "topScore": 1,
+            "avgScore": 0,
+            "results": [
+              {
+                "name": "Nina Verhoeven",
+                "score": 1
+              },
+              {
+                "name": "Mats Claes",
+                "score": 0
+              },
+              {
+                "name": "Lotte Willems",
+                "score": 0
+              }
+            ]
+          },
+          "Dames -16": {
+            "participants": 3,
+            "topScore": 1,
+            "avgScore": 0,
+            "results": [
+              {
+                "name": "Kobe Simons",
+                "score": 1
+              },
+              {
+                "name": "Fien Cornelissen",
+                "score": 0
+              },
+              {
+                "name": "Arne Martins",
+                "score": 0
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "tn-2027-02",
+    "name": "Spring Challenge",
+    "date": "2027-03-05",
+    "location": "Brussels Skating Dome",
+    "disciplines": [
+      {
+        "name": "Hoogspringen",
+        "categories": {
+          "Heren +16": {
+            "participants": 15,
+            "topScore": 200,
+            "avgScore": 168,
+            "results": [
+              {
+                "name": "Jefke Vermatsen",
+                "score": 200
+              },
+              {
+                "name": "Pieter Janssens",
+                "score": 192
+              },
+              {
+                "name": "Sofie De Wilde",
+                "score": 185
+              }
+            ]
+          },
+          "Heren -16": {
+            "participants": 11,
+            "topScore": 182,
+            "avgScore": 155,
+            "results": [
+              {
+                "name": "Lars Maes",
+                "score": 182
+              },
+              {
+                "name": "Emma Peeters",
+                "score": 174
+              },
+              {
+                "name": "Thomas Jacobs",
+                "score": 167
+              }
+            ]
+          },
+          "Dames +16": {
+            "participants": 12,
+            "topScore": 188,
+            "avgScore": 162,
+            "results": [
+              {
+                "name": "Nina Verhoeven",
+                "score": 188
+              },
+              {
+                "name": "Mats Claes",
+                "score": 180
+              },
+              {
+                "name": "Lotte Willems",
+                "score": 173
+              }
+            ]
+          },
+          "Dames -16": {
+            "participants": 7,
+            "topScore": 170,
+            "avgScore": 145,
+            "results": [
+              {
+                "name": "Kobe Simons",
+                "score": 170
+              },
+              {
+                "name": "Fien Cornelissen",
+                "score": 162
+              },
+              {
+                "name": "Arne Martins",
+                "score": 155
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Hoogspringen met schans",
+        "categories": {
+          "Heren +16": {
+            "participants": 13,
+            "topScore": 215,
+            "avgScore": 176,
+            "results": [
+              {
+                "name": "Emma Peeters",
+                "score": 215
+              },
+              {
+                "name": "Thomas Jacobs",
+                "score": 207
+              },
+              {
+                "name": "Nina Verhoeven",
+                "score": 200
+              }
+            ]
+          },
+          "Heren -16": {
+            "participants": 9,
+            "topScore": 190,
+            "avgScore": 158,
+            "results": [
+              {
+                "name": "Mats Claes",
+                "score": 190
+              },
+              {
+                "name": "Lotte Willems",
+                "score": 182
+              },
+              {
+                "name": "Kobe Simons",
+                "score": 175
+              }
+            ]
+          },
+          "Dames +16": {
+            "participants": 11,
+            "topScore": 195,
+            "avgScore": 165,
+            "results": [
+              {
+                "name": "Fien Cornelissen",
+                "score": 195
+              },
+              {
+                "name": "Arne Martins",
+                "score": 187
+              },
+              {
+                "name": "Jefke Vermatsen",
+                "score": 180
+              }
+            ]
+          },
+          "Dames -16": {
+            "participants": 6,
+            "topScore": 178,
+            "avgScore": 148,
+            "results": [
+              {
+                "name": "Pieter Janssens",
+                "score": 178
+              },
+              {
+                "name": "Sofie De Wilde",
+                "score": 170
+              },
+              {
+                "name": "Lars Maes",
+                "score": 163
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Verspringen",
+        "categories": {
+          "Heren +16": {
+            "participants": 13,
+            "topScore": 635,
+            "avgScore": 555,
+            "results": [
+              {
+                "name": "Lotte Willems",
+                "score": 635
+              },
+              {
+                "name": "Kobe Simons",
+                "score": 627
+              },
+              {
+                "name": "Fien Cornelissen",
+                "score": 620
+              }
+            ]
+          },
+          "Heren -16": {
+            "participants": 10,
+            "topScore": 600,
+            "avgScore": 520,
+            "results": [
+              {
+                "name": "Arne Martins",
+                "score": 600
+              },
+              {
+                "name": "Jefke Vermatsen",
+                "score": 592
+              },
+              {
+                "name": "Pieter Janssens",
+                "score": 585
+              }
+            ]
+          },
+          "Dames +16": {
+            "participants": 9,
+            "topScore": 590,
+            "avgScore": 510,
+            "results": [
+              {
+                "name": "Sofie De Wilde",
+                "score": 590
+              },
+              {
+                "name": "Lars Maes",
+                "score": 582
+              },
+              {
+                "name": "Emma Peeters",
+                "score": 575
+              }
+            ]
+          },
+          "Dames -16": {
+            "participants": 5,
+            "topScore": 560,
+            "avgScore": 485,
+            "results": [
+              {
+                "name": "Thomas Jacobs",
+                "score": 560
+              },
+              {
+                "name": "Nina Verhoeven",
+                "score": 552
+              },
+              {
+                "name": "Mats Claes",
+                "score": 545
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Ice Cross",
+        "categories": {
+          "Heren +16": {
+            "participants": 16,
+            "topScore": 1,
+            "avgScore": 0,
+            "results": [
+              {
+                "name": "Jefke Vermatsen",
+                "score": 1
+              },
+              {
+                "name": "Pieter Janssens",
+                "score": 0
+              },
+              {
+                "name": "Sofie De Wilde",
+                "score": 0
+              }
+            ]
+          },
+          "Heren -16": {
+            "participants": 12,
+            "topScore": 1,
+            "avgScore": 0,
+            "results": [
+              {
+                "name": "Lars Maes",
+                "score": 1
+              },
+              {
+                "name": "Emma Peeters",
+                "score": 0
+              },
+              {
+                "name": "Thomas Jacobs",
+                "score": 0
+              }
+            ]
+          },
+          "Dames +16": {
+            "participants": 9,
+            "topScore": 1,
+            "avgScore": 0,
+            "results": [
+              {
+                "name": "Nina Verhoeven",
+                "score": 1
+              },
+              {
+                "name": "Mats Claes",
+                "score": 0
+              },
+              {
+                "name": "Lotte Willems",
+                "score": 0
+              }
+            ]
+          },
+          "Dames -16": {
+            "participants": 4,
+            "topScore": 1,
+            "avgScore": 0,
+            "results": [
+              {
+                "name": "Kobe Simons",
+                "score": 1
+              },
+              {
+                "name": "Fien Cornelissen",
+                "score": 0
+              },
+              {
+                "name": "Arne Martins",
+                "score": 0
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "tn-2027-03",
+    "name": "Summer Air Show",
+    "date": "2027-06-20",
+    "location": "Antwerp Ice Park",
+    "disciplines": [
+      {
+        "name": "Hoogspringen",
+        "categories": {
+          "Heren +16": {
+            "participants": 14,
+            "topScore": 198,
+            "avgScore": 165,
+            "results": [
+              {
+                "name": "Jefke Vermatsen",
+                "score": 198
+              },
+              {
+                "name": "Pieter Janssens",
+                "score": 190
+              },
+              {
+                "name": "Sofie De Wilde",
+                "score": 183
+              }
+            ]
+          },
+          "Heren -16": {
+            "participants": 10,
+            "topScore": 180,
+            "avgScore": 152,
+            "results": [
+              {
+                "name": "Lars Maes",
+                "score": 180
+              },
+              {
+                "name": "Emma Peeters",
+                "score": 172
+              },
+              {
+                "name": "Thomas Jacobs",
+                "score": 165
+              }
+            ]
+          },
+          "Dames +16": {
+            "participants": 13,
+            "topScore": 189,
+            "avgScore": 163,
+            "results": [
+              {
+                "name": "Nina Verhoeven",
+                "score": 189
+              },
+              {
+                "name": "Mats Claes",
+                "score": 181
+              },
+              {
+                "name": "Lotte Willems",
+                "score": 174
+              }
+            ]
+          },
+          "Dames -16": {
+            "participants": 8,
+            "topScore": 172,
+            "avgScore": 147,
+            "results": [
+              {
+                "name": "Kobe Simons",
+                "score": 172
+              },
+              {
+                "name": "Fien Cornelissen",
+                "score": 164
+              },
+              {
+                "name": "Arne Martins",
+                "score": 157
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Hoogspringen met schans",
+        "categories": {
+          "Heren +16": {
+            "participants": 12,
+            "topScore": 210,
+            "avgScore": 175,
+            "results": [
+              {
+                "name": "Emma Peeters",
+                "score": 210
+              },
+              {
+                "name": "Thomas Jacobs",
+                "score": 202
+              },
+              {
+                "name": "Nina Verhoeven",
+                "score": 195
+              }
+            ]
+          },
+          "Heren -16": {
+            "participants": 8,
+            "topScore": 185,
+            "avgScore": 155,
+            "results": [
+              {
+                "name": "Mats Claes",
+                "score": 185
+              },
+              {
+                "name": "Lotte Willems",
+                "score": 177
+              },
+              {
+                "name": "Kobe Simons",
+                "score": 170
+              }
+            ]
+          },
+          "Dames +16": {
+            "participants": 12,
+            "topScore": 194,
+            "avgScore": 166,
+            "results": [
+              {
+                "name": "Fien Cornelissen",
+                "score": 194
+              },
+              {
+                "name": "Arne Martins",
+                "score": 186
+              },
+              {
+                "name": "Jefke Vermatsen",
+                "score": 179
+              }
+            ]
+          },
+          "Dames -16": {
+            "participants": 6,
+            "topScore": 176,
+            "avgScore": 146,
+            "results": [
+              {
+                "name": "Pieter Janssens",
+                "score": 176
+              },
+              {
+                "name": "Sofie De Wilde",
+                "score": 168
+              },
+              {
+                "name": "Lars Maes",
+                "score": 161
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Verspringen",
+        "categories": {
+          "Heren +16": {
+            "participants": 14,
+            "topScore": 640,
+            "avgScore": 560,
+            "results": [
+              {
+                "name": "Lotte Willems",
+                "score": 640
+              },
+              {
+                "name": "Kobe Simons",
+                "score": 632
+              },
+              {
+                "name": "Fien Cornelissen",
+                "score": 625
+              }
+            ]
+          },
+          "Heren -16": {
+            "participants": 11,
+            "topScore": 605,
+            "avgScore": 525,
+            "results": [
+              {
+                "name": "Arne Martins",
+                "score": 605
+              },
+              {
+                "name": "Jefke Vermatsen",
+                "score": 597
+              },
+              {
+                "name": "Pieter Janssens",
+                "score": 590
+              }
+            ]
+          },
+          "Dames +16": {
+            "participants": 10,
+            "topScore": 595,
+            "avgScore": 515,
+            "results": [
+              {
+                "name": "Sofie De Wilde",
+                "score": 595
+              },
+              {
+                "name": "Lars Maes",
+                "score": 587
+              },
+              {
+                "name": "Emma Peeters",
+                "score": 580
+              }
+            ]
+          },
+          "Dames -16": {
+            "participants": 6,
+            "topScore": 570,
+            "avgScore": 490,
+            "results": [
+              {
+                "name": "Thomas Jacobs",
+                "score": 570
+              },
+              {
+                "name": "Nina Verhoeven",
+                "score": 562
+              },
+              {
+                "name": "Mats Claes",
+                "score": 555
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "Ice Cross",
+        "categories": {
+          "Heren +16": {
+            "participants": 18,
+            "topScore": 1,
+            "avgScore": 0,
+            "results": [
+              {
+                "name": "Jefke Vermatsen",
+                "score": 1
+              },
+              {
+                "name": "Pieter Janssens",
+                "score": 0
+              },
+              {
+                "name": "Sofie De Wilde",
+                "score": 0
+              }
+            ]
+          },
+          "Heren -16": {
+            "participants": 13,
+            "topScore": 1,
+            "avgScore": 0,
+            "results": [
+              {
+                "name": "Lars Maes",
+                "score": 1
+              },
+              {
+                "name": "Emma Peeters",
+                "score": 0
+              },
+              {
+                "name": "Thomas Jacobs",
+                "score": 0
+              }
+            ]
+          },
+          "Dames +16": {
+            "participants": 11,
+            "topScore": 1,
+            "avgScore": 0,
+            "results": [
+              {
+                "name": "Nina Verhoeven",
+                "score": 1
+              },
+              {
+                "name": "Mats Claes",
+                "score": 0
+              },
+              {
+                "name": "Lotte Willems",
+                "score": 0
+              }
+            ]
+          },
+          "Dames -16": {
+            "participants": 5,
+            "topScore": 1,
+            "avgScore": 0,
+            "results": [
+              {
+                "name": "Kobe Simons",
+                "score": 1
+              },
+              {
+                "name": "Fien Cornelissen",
+                "score": 0
+              },
+              {
+                "name": "Arne Martins",
+                "score": 0
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+]

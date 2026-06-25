@@ -53,6 +53,15 @@
             </li>
             <li>
               <router-link 
+                to="/toernooien" 
+                class="nav-link text-frost-white hover:text-xtreme-yellow transition-all duration-300 font-heading font-medium lg:text-base xl:text-lg tracking-wide"
+                active-class="text-xtreme-yellow border-b-2 border-xtreme-yellow"
+              >
+                Toernooien
+              </router-link>
+            </li>
+            <li>
+              <router-link 
                 to="/trainingskalender" 
                 class="nav-link text-frost-white hover:text-xtreme-yellow transition-all duration-300 font-heading font-medium lg:text-base xl:text-lg tracking-wide"
                 active-class="text-xtreme-yellow border-b-2 border-xtreme-yellow"
@@ -117,6 +126,16 @@
               active-class="text-xtreme-yellow bg-xtreme-dark"
             >
               Evenementen
+            </router-link>
+          </li>
+          <li>
+            <router-link 
+              to="/toernooien" 
+              @click="closeMobileMenu"
+              class="block px-3 py-2 text-frost-white hover:text-xtreme-yellow hover:bg-xtreme-dark rounded-md transition-all duration-300 font-heading tracking-wide"
+              active-class="text-xtreme-yellow bg-xtreme-dark"
+            >
+              Kampioenschap
             </router-link>
           </li>
           <li>

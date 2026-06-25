@@ -138,7 +138,7 @@ export default {
       // Create and download the file (universal method)
       const blob = new Blob([icsContent.replace(/\\n/g, '\n')], { type: 'text/calendar' });
       const url = URL.createObjectURL(blob);
-      const filename = 'xtreme-on-ice-trainingen-2025-2026.ics';
+      const filename = 'xtreme-on-ice-trainingen-2026-2027.ics';
       const link = document.createElement('a');
       link.href = url;
       link.download = filename;
