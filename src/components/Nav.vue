@@ -57,7 +57,7 @@
                 class="nav-link text-frost-white hover:text-xtreme-yellow transition-all duration-300 font-heading font-medium lg:text-base xl:text-lg tracking-wide"
                 active-class="text-xtreme-yellow border-b-2 border-xtreme-yellow"
               >
-                Toernooien
+                Kampioenschap
               </router-link>
             </li>
             <li>

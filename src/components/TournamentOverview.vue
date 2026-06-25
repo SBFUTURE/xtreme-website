@@ -16,24 +16,17 @@
         </div>
 
         <div class="flex gap-3">
-          <div>
-            <label class="block text-frost-white/80 text-sm mb-1">Discipline</label>
-            <select v-model="disciplineFilter" class="bg-xtreme-dark text-frost-white rounded-md p-2">
-              <option value="all">Alle disciplines</option>
-              <option v-for="d in availableDisciplines" :key="d" :value="d">{{ d }}</option>
-            </select>
-          </div>
-
+            <div>
+              <label class="block text-frost-white/80 text-sm mb-1">Discipline</label>
+              <select v-model="disciplineFilter" class="bg-xtreme-dark text-frost-white rounded-md p-2">
+                <option v-for="d in availableDisciplines" :key="d" :value="d">{{ d }}</option>
+              </select>
+            </div>
           <div>
             <label class="block text-frost-white/80 text-sm mb-1">Categorie</label>
             <select v-model="categoryFilter" class="bg-xtreme-dark text-frost-white rounded-md p-2">
-              <option value="all">Alle categorieën</option>
               <option v-for="c in availableCategories" :key="c" :value="c">{{ c }}</option>
             </select>
-          </div>
-
-          <div class="flex items-end">
-            <button @click="resetFilters" class="ml-2 bg-xtreme-yellow text-xtreme-black px-3 py-2 rounded-md text-sm">Reset</button>
           </div>
         </div>
       </div>
@@ -42,15 +35,8 @@
         <div class="mb-4 flex items-center justify-between">
           <div>
             <h3 class="text-xl font-semibold text-frost-white">
-              {{ selectedTournament ? selectedTournament.name : 'Overzicht van alle kampioenschappen' }}
+              {{ selectedTournament ? selectedTournament.name : 'Klassement van alle kampioenschappen' }}
             </h3>
-            <p class="text-sm text-frost-white/70">
-              {{ selectedTournament ? formatDate(selectedTournament.date) + ' — ' + selectedTournament.location : 'Chronologisch overzicht van alle toernooien' }}
-            </p>
-          </div>
-          <div class="text-sm text-frost-white/80">
-            <div v-if="selectedTournament"><strong class="text-xtreme-yellow">Disciplines:</strong> {{ selectedTournament.disciplines.length }}</div>
-            <div v-else><strong class="text-xtreme-yellow">Toernooien:</strong> {{ selectedTournaments.length }}</div>
           </div>
         </div>
 
@@ -59,7 +45,6 @@
             <thead>
               <tr class="text-left text-frost-white/80 border-b border-xtreme-yellow/10">
                 <th class="py-2 text-xtreme-yellow font-semibold">Plaats</th>
-                <th class="py-2">Kampioenschap</th>
                 <th class="py-2">Discipline</th>
                 <th class="py-2">Categorie</th>
                 <th class="py-2">Deelnemer</th>
@@ -67,9 +52,8 @@
               </tr>
             </thead>
             <tbody>
-              <tr v-for="row in tournamentRows" :key="row.tournamentId + '-' + row.disciplineName + '-' + row.categoryName + '-' + row.participantName" :class="['border-b border-xtreme-yellow/6', row.place === 1 ? 'bg-xtreme-yellow/15' : row.place === 2 ? 'bg-slate-600/40' : row.place === 3 ? 'bg-slate-600/25' : '']">
+              <tr v-for="row in tournamentRows" :key="row.disciplineName + '-' + row.categoryName + '-' + row.participantName" :class="['border-b border-xtreme-yellow/6', row.place === 1 ? 'bg-xtreme-yellow/15' : row.place === 2 ? 'bg-slate-600/40' : row.place === 3 ? 'bg-slate-600/25' : '']">
                 <td class="py-2 align-top text-frost-white font-semibold">{{ row.place }}</td>
-                <td class="py-2 align-top text-frost-white">{{ row.tournamentName }}</td>
                 <td class="py-2 align-top text-frost-white">{{ row.disciplineName }}</td>
                 <td class="py-2 align-top text-frost-white/80">{{ row.categoryName }}</td>
                 <td class="py-2 align-top text-frost-white">{{ row.participantName }}</td>
@@ -88,13 +72,13 @@
 
 <script setup>
 import tournaments from '@/assets/tournaments.json'
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 
 const tournamentsList = computed(() => tournaments || [])
 
 const selectedTournamentId = ref('all')
-const disciplineFilter = ref('all')
-const categoryFilter = ref('all')
+const disciplineFilter = ref('')
+const categoryFilter = ref('')
 
 const sortedTournaments = computed(() => {
   return [...tournamentsList.value].sort((a, b) => new Date(a.date) - new Date(b.date))
@@ -118,11 +102,7 @@ const formatDate = (d) => {
   }
 }
 
-const availableDisciplines = computed(() => {
-  const set = new Set()
-  selectedTournaments.value.forEach(t => t.disciplines.forEach(d => set.add(d.name)))
-  return Array.from(set)
-})
+// removed availableDisciplines: discipline filtering not applicable
 
 const availableCategories = computed(() => {
   const set = new Set()
@@ -130,41 +110,120 @@ const availableCategories = computed(() => {
   return Array.from(set)
 })
 
+// auto-select first available category name if empty/invalid
+watch(availableCategories, (newVal) => {
+  if (!newVal || newVal.length === 0) {
+    categoryFilter.value = ''
+    return
+  }
+  if (!categoryFilter.value || !newVal.includes(categoryFilter.value)) {
+    categoryFilter.value = newVal[0]
+  }
+}, { immediate: true })
+
+const availableDisciplines = computed(() => {
+  const set = new Set()
+  selectedTournaments.value.forEach(t => t.disciplines.forEach(d => set.add(d.name)))
+  return Array.from(set)
+})
+
+// when the available disciplines change, ensure disciplineFilter is set to a valid value
+watch(availableDisciplines, (newVal) => {
+  if (!newVal || newVal.length === 0) {
+    disciplineFilter.value = ''
+    return
+  }
+  // Always ensure a valid discipline is selected (no empty option)
+  if (!disciplineFilter.value || !newVal.includes(disciplineFilter.value)) {
+    disciplineFilter.value = newVal[0]
+  }
+}, { immediate: true })
+
+// When switching between 'all' and a specific tournament, adjust disciplineFilter
+watch(selectedTournamentId, (val) => {
+  const avail = availableDisciplines.value
+  if (avail && avail.length > 0 && !avail.includes(disciplineFilter.value)) {
+    disciplineFilter.value = avail[0]
+  }
+})
+
 const tournamentRows = computed(() => {
-  const rows = selectedTournaments.value.flatMap(tournament => {
-    return tournament.disciplines
-      .filter(d => disciplineFilter.value === 'all' || d.name === disciplineFilter.value)
-      .flatMap(discipline => {
-        return Object.entries(discipline.categories)
-          .filter(([categoryName]) => categoryFilter.value === 'all' || categoryFilter.value === categoryName)
-          .flatMap(([categoryName, categoryData]) => {
-            const results = Array.isArray(categoryData.results) ? categoryData.results : []
-            return results.map(result => ({
-              tournamentId: tournament.id,
-              tournamentName: tournament.name,
-              tournamentDate: tournament.date,
-              tournamentLocation: tournament.location,
+  const includeDiscipline = (name) => {
+    // only include the selected discipline
+    if (!disciplineFilter.value) return true
+    return name === disciplineFilter.value
+  }
+  const includeCategory = (name) => categoryFilter.value ? name === categoryFilter.value : true
+
+  // When viewing ALL championships: aggregate participant scores across tournaments per discipline+category
+  if (selectedTournamentId.value === 'all') {
+    const groups = {} // key -> { disciplineName, categoryName, participants: { name: score } }
+
+    selectedTournaments.value.forEach(tournament => {
+      tournament.disciplines
+        .filter(d => includeDiscipline(d.name))
+        .forEach(discipline => {
+          Object.entries(discipline.categories)
+            .filter(([categoryName]) => includeCategory(categoryName))
+            .forEach(([categoryName, categoryData]) => {
+              const results = Array.isArray(categoryData.results) ? categoryData.results : []
+              const groupKey = `${discipline.name}||${categoryName}`
+              if (!groups[groupKey]) groups[groupKey] = { disciplineName: discipline.name, categoryName, participants: {} }
+              results.forEach(r => {
+                const score = Number(r.score) || 0
+                groups[groupKey].participants[r.name] = (groups[groupKey].participants[r.name] || 0) + score
+              })
+            })
+        })
+    })
+
+    const final = []
+    Object.values(groups).forEach(group => {
+      const participants = Object.entries(group.participants).map(([name, score]) => ({ participantName: name, score }))
+      participants.sort((a, b) => b.score - a.score)
+      participants.forEach((p, idx) => {
+        final.push({
+          disciplineName: group.disciplineName,
+          categoryName: group.categoryName,
+          participantName: p.participantName,
+          score: p.score,
+          place: idx + 1,
+        })
+      })
+    })
+    return final
+  }
+
+  // When a specific tournament is selected: rank participants within that tournament per discipline+category
+  const tournament = selectedTournaments.value[0]
+  if (!tournament) return []
+
+  const final = []
+  tournament.disciplines
+    .filter(d => includeDiscipline(d.name))
+    .forEach(discipline => {
+      Object.entries(discipline.categories)
+        .filter(([categoryName]) => includeCategory(categoryName))
+        .forEach(([categoryName, categoryData]) => {
+          const results = Array.isArray(categoryData.results) ? categoryData.results : []
+          const sorted = results.map(r => ({ participantName: r.name, score: Number(r.score) || 0 })).sort((a, b) => b.score - a.score)
+          sorted.forEach((p, idx) => {
+            final.push({
               disciplineName: discipline.name,
               categoryName,
-              participantName: result.name,
-              score: result.score,
-            }))
+              participantName: p.participantName,
+              score: p.score,
+              place: idx + 1,
+            })
           })
-      })
-  })
-  return rows
-    .sort((a, b) => b.score - a.score)
-    .map((row, index) => ({ ...row, place: index + 1 }))
+        })
+    })
+
+  return final
 })
 
 const displayScore = (score) => {
   return score === undefined || score === null ? '-' : score
-}
-
-const resetFilters = () => {
-  selectedTournamentId.value = 'all'
-  disciplineFilter.value = 'all'
-  categoryFilter.value = 'all'
 }
 </script>
 
