@@ -63,6 +63,11 @@ const router = createRouter({
       component: TournamentOverviewView
     },
     {
+      path: '/coming-soon',
+      name: 'coming-soon',
+      component: () => import('@/views/ComingSoonView.vue')
+    },
+    {
       path: '/privacybeleid',
       name: 'privacybeleid',
       component: () => import('@/views/PrivacyBeleidView.vue')

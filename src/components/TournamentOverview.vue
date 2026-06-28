@@ -2,7 +2,7 @@
   <section class="max-w-6xl mx-auto p-6">
     <header class="mb-6">
       <h2 class="text-3xl font-heading font-bold text-xtreme-yellow">Kampioenschappen</h2>
-      <p class="text-sm text-frost-white/80">Selecteer een toernooi en filter op discipline of categorie voor een eenvoudig overzicht.</p>
+      <p class="text-sm text-frost-white/80">Selecteer een Kampioenschap en filter op discipline of categorie voor een eenvoudig overzicht.</p>
     </header>
 
     <div class="bg-xtreme-black/60 rounded-lg p-4 md:p-6 shadow-lg border border-xtreme-yellow/10">
