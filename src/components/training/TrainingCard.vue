@@ -77,6 +77,7 @@ export default {
     const getCardClass = (title) => {
       switch (title) {
         case 'Xtreme Night':
+        case 'Xtreme Kampioenschap':
           return 'xtreme-night-card'
         case 'Evenement':
           return 'event-card'
@@ -88,6 +89,7 @@ export default {
     const getDateCircleClass = (title) => {
       switch (title) {
         case 'Xtreme Night':
+        case 'Xtreme Kampioenschap':
           return 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
         case 'Evenement':
           return 'bg-gradient-to-r from-yellow-400 to-orange-400 text-black'
@@ -99,6 +101,7 @@ export default {
     const getBadgeClass = (title) => {
       switch (title) {
         case 'Xtreme Night':
+        case 'Xtreme Kampioenschap':
           return 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
         case 'Evenement':
           return 'bg-gradient-to-r from-yellow-400 to-orange-400 text-black'

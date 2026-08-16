@@ -6,6 +6,7 @@ import EventDetailView from '@/views/EventDetailView.vue'
 import ContactView from '@/views/ContactView.vue'
 import TrainingSchemaView from '@/views/TrainingSchemaView.vue'
 import TournamentOverviewView from '@/views/TournamentOverviewView.vue'
+import SpelReglementView from '@/views/SpelReglementView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -61,6 +62,11 @@ const router = createRouter({
       path: '/toernooien',
       name: 'toernooien',
       component: TournamentOverviewView
+    },
+    {
+      path: '/spelreglement',
+      name: 'spelreglement',
+      component: SpelReglementView
     },
     {
       path: '/coming-soon',

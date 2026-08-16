@@ -184,6 +184,7 @@ export default {
     const getEventClass = (title) => {
       switch (title) {
         case 'Xtreme Night':
+        case 'Xtreme Kampioenschap':
           return 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-sm'
         case 'Evenement':
           return 'bg-gradient-to-r from-orange-400 to-red-400 text-white shadow-sm'
