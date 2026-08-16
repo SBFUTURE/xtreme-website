@@ -1,5 +1,5 @@
 <template>
-  <main class="min-h-screen bg-xtreme-gradient px-4 py-16">
+  <main class="bg-xtreme-gradient px-4 pt-0 pb-0">
     <section class="mx-auto max-w-4xl rounded-[2rem] border border-xtreme-yellow/20 bg-xtreme-black/95 p-10 shadow-2xl backdrop-blur-xl animate-glow before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.08),_transparent_35%)] before:rounded-[2rem] relative overflow-hidden">
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.06),transparent_18%)] opacity-60"></div>
       <div class="absolute -right-6 top-20 h-44 w-44 rounded-full bg-xtreme-yellow/20 blur-3xl opacity-80"></div>

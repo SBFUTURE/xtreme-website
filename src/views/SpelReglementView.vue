@@ -2,12 +2,6 @@
   <div class="min-h-screen bg-ice-gradient">
     <section class="py-8 px-4">
       <div class="max-w-6xl mx-auto">
-        <div class="mb-6 flex justify-start">
-          <button type="button" class="back-button" @click="goBack">
-            ← Terug
-          </button>
-        </div>
-
         <div class="text-center">
           <h1 class="text-5xl lg:text-6xl font-heading font-bold mb-4 text-xtreme-yellow">Spelreglement</h1>
           <p class="text-lg text-gray-300 max-w-4xl mx-auto">Officieel reglement — Xtreme Kampioenschap 2026–2027</p>
@@ -18,6 +12,15 @@
     <section class="py-8 px-4">
       <div class="max-w-6xl mx-auto">
         <div class="ice-card p-6 lg:p-10">
+          <button 
+            @click="$router.back()"
+            class="inline-flex items-center text-xtreme-yellow hover:text-xtreme-light-yellow transition-colors font-semibold focus:outline-none mb-6"
+          >
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Terug naar vorige pagina
+          </button>
           <div class="space-y-6 text-gray-200">
             <div>
               <h2 class="text-2xl font-semibold">Doel van het Xtreme Kampioenschap</h2>
@@ -189,18 +192,6 @@
 
 <script setup>
 import { onMounted } from 'vue'
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
-
-const goBack = () => {
-  if (window.history.length > 1) {
-    router.go(-1)
-    return
-  }
-
-  router.push('/toernooien')
-}
 
 onMounted(() => {
   document.title = 'Spelreglement | Xtreme On Ice'
@@ -225,29 +216,6 @@ onMounted(() => {
   border: 1px solid rgba(255, 237, 78, 0.3);
   border-radius: 0.75rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-.back-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: transparent;
-  border: 1px solid rgba(255, 237, 78, 0.5);
-  color: #ffed4e;
-  border-radius: 9999px;
-  padding: 0.6rem 1rem;
-  font-family: 'Oswald', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.back-button:hover {
-  background: rgba(255, 237, 78, 0.12);
-  transform: translateY(-1px);
 }
 
 h2,

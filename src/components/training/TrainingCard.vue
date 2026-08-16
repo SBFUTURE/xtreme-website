@@ -79,6 +79,8 @@ export default {
         case 'Xtreme Night':
         case 'Xtreme Kampioenschap':
           return 'xtreme-night-card'
+        case 'Challenge':
+          return 'challenge-card'
         case 'Evenement':
           return 'event-card'
         default:
@@ -91,6 +93,8 @@ export default {
         case 'Xtreme Night':
         case 'Xtreme Kampioenschap':
           return 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
+        case 'Challenge':
+          return 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-lg'
         case 'Evenement':
           return 'bg-gradient-to-r from-yellow-400 to-orange-400 text-black'
         default:
@@ -103,6 +107,8 @@ export default {
         case 'Xtreme Night':
         case 'Xtreme Kampioenschap':
           return 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
+        case 'Challenge':
+          return 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-lg'
         case 'Evenement':
           return 'bg-gradient-to-r from-yellow-400 to-orange-400 text-black'
         default:
@@ -159,7 +165,18 @@ export default {
   overflow: hidden;
 }
 
-.xtreme-night-card::before {
+.challenge-card {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.12) 0%, rgba(59, 130, 246, 0.12) 100%);
+  border: 2px solid rgba(34, 211, 238, 0.55);
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(34, 211, 238, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.xtreme-night-card::before,
+.challenge-card::before {
   content: '';
   position: absolute;
   top: -2px;
@@ -173,7 +190,12 @@ export default {
   transition: opacity 0.3s ease;
 }
 
-.xtreme-night-card:hover::before {
+.challenge-card::before {
+  background: linear-gradient(45deg, #06b6d4, #3b82f6, #06b6d4);
+}
+
+.xtreme-night-card:hover::before,
+.challenge-card:hover::before {
   opacity: 0.3;
   animation: xtreme-glow 2s infinite alternate;
 }
@@ -182,6 +204,13 @@ export default {
   border-color: rgba(236, 72, 153, 0.8);
   box-shadow: 0 8px 32px rgba(147, 51, 234, 0.4);
   background: linear-gradient(135deg, rgba(147, 51, 234, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%);
+  transform: translateY(-2px);
+}
+
+.challenge-card:hover {
+  border-color: rgba(34, 211, 238, 0.8);
+  box-shadow: 0 8px 32px rgba(6, 182, 212, 0.35);
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.12) 0%, rgba(59, 130, 246, 0.12) 100%);
   transform: translateY(-2px);
 }
 
