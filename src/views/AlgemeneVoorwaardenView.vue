@@ -32,12 +32,12 @@
         <h2 class="text-2xl font-bold text-xtreme-yellow mt-8 mb-2">Contactpersonen</h2>
         <ul class="ml-6 space-y-1">
           <li>Hoofdcontact persoon: Maarten Michiels</li>
-          <li>Arne De Donder – Voorzitter – Tel: 0476.08.74.89</li>
-          <li>Maarten Michiels – Secretaris – Tel: 0471.82.31.42</li>
-          <li>Tristan Van Valckenborgh – Penningmeester – Tel: 0478.09.09.11</li>
-          <li>Ilana Du Bois – Mede financiën – Tel: 0468.22.25.33</li>
+          <li>Maarten Michiels – Voorzitter – Tel: 0471.82.31.42</li>
+          <li>Arne De Donder – Penningmeester – Tel: 0476.08.74.89</li>
+          <li>Stephen Bombeke – Secretaris – Tel: 0476.70.14.10</li>
+          <li>Tristan Van Valckenborgh – Materiaalmeester – Tel: 0478.09.09.11</li>
+          <li>Ilana Du Bois – Content Creator – Tel: 0468.22.25.33</li>
           <li>Cedric Philipin – Opvolgingshoofd – Tel: 0474.76.16.57</li>
-          <li>Stephen Bombeke – Website creator – Tel: 0476.70.14.10</li>
         </ul>
         <!-- Formulier voor akkoord is verwijderd op verzoek -->
       </div>
