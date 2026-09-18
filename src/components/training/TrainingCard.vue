@@ -83,6 +83,8 @@ export default {
           return 'challenge-card'
         case 'Evenement':
           return 'event-card'
+        case 'Kerstmarkt':
+          return 'christmas-market-card'
         default:
           return 'regular-card'
       }
@@ -97,6 +99,8 @@ export default {
           return 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-lg'
         case 'Evenement':
           return 'bg-gradient-to-r from-yellow-400 to-orange-400 text-black'
+        case 'Kerstmarkt':
+          return 'bg-gradient-to-r from-red-500 to-rose-600 text-white shadow-lg'
         default:
           return 'bg-xtreme-yellow text-black'
       }
@@ -111,6 +115,8 @@ export default {
           return 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-lg'
         case 'Evenement':
           return 'bg-gradient-to-r from-yellow-400 to-orange-400 text-black'
+        case 'Kerstmarkt':
+          return 'bg-gradient-to-r from-red-500 to-rose-600 text-white shadow-lg'
         default:
           return 'bg-xtreme-yellow text-black'
       }
@@ -153,6 +159,20 @@ export default {
   border-color: rgba(255, 193, 7, 0.8);
   box-shadow: 0 8px 32px rgba(255, 193, 7, 0.3);
   background: linear-gradient(135deg, rgba(255, 237, 78, 0.15) 0%, rgba(255, 193, 7, 0.15) 100%);
+}
+
+.christmas-market-card {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.12) 0%, rgba(225, 29, 72, 0.12) 100%);
+  border: 2px solid rgba(239, 68, 68, 0.55);
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.2);
+}
+
+.christmas-market-card:hover {
+  border-color: rgba(244, 63, 94, 0.85);
+  box-shadow: 0 8px 32px rgba(239, 68, 68, 0.35);
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.18) 0%, rgba(225, 29, 72, 0.18) 100%);
 }
 
 .xtreme-night-card {

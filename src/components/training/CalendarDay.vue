@@ -68,6 +68,8 @@ export default {
           return 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
         case 'Evenement':
           return 'bg-gradient-to-r from-yellow-400 to-orange-400'
+        case 'Kerstmarkt':
+          return 'bg-gradient-to-r from-red-500 to-rose-600 text-white'
         default:
           return 'bg-xtreme-yellow'
       }
@@ -79,6 +81,8 @@ export default {
           return '🌟'
         case 'Evenement':
           return '🎉'
+        case 'Kerstmarkt':
+          return '🎄'
         default:
           return '⛸️'
       }
@@ -90,6 +94,8 @@ export default {
           return 'Night'
         case 'Evenement':
           return 'Event'
+        case 'Kerstmarkt':
+          return 'Kerst'
         default:
           return 'Train'
       }

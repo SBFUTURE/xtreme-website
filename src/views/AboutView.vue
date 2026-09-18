@@ -58,7 +58,14 @@
         <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
           <article v-for="member in crewMembers" :key="member.name" class="ice-card crew-card">
             <div class="crew-photo" :aria-label="`Fotoplaats voor ${member.name}`">
-              <img :src="member.photo" :alt="`Foto van ${member.name}`" />
+              <img
+                :src="member.photo"
+                :alt="`Foto van ${member.name}`"
+                :style="{ objectPosition: member.objectPosition }"
+                loading="lazy"
+                decoding="async"
+                sizes="(max-width: 639px) 40vw, (max-width: 1023px) 30vw, 10rem"
+              />
             </div>
             <div class="text-center">
               <h3 class="text-base sm:text-xl font-heading font-bold text-xtreme-yellow mb-2">
@@ -92,12 +99,12 @@
 
 <script setup>
 const crewMembers = [
-  { name: 'Arne De Donder', role: 'Penningmeester / Trainer', photo: '/Images/The_Crew/arne_dd.jpg' },
-  { name: 'Maarten Michiels', role: 'Voorzitter / Trainer', photo: '/Images/The_Crew/maarten_m.jpeg' },
-  { name: 'Stephen Bombeke', role: 'Secretaris / Trainer', photo: '/Images/The_Crew/stephen_B.jpeg' },
-  { name: 'Tristan Van Valckenborgh', role: 'Materiaalmeester / Trainer', photo: '/Images/The_Crew/tristan_v.jpeg' },
-  { name: 'Ilana Du Bois', role: 'Content Creator / Trainer', photo: '/Images/The_Crew/ilana_db.jpeg' },
-  { name: 'Cedric Philipin', role: 'Trainer', photo: '/Images/The_Crew/cedric_ph.jpg' },
+  { name: 'Arne De Donder', role: 'Penningmeester / Trainer', photo: '/Images/The_Crew/arne_dd.jpg', objectPosition: '50% 18%' },
+  { name: 'Maarten Michiels', role: 'Voorzitter / Trainer', photo: '/Images/The_Crew/maarten_m.jpeg', objectPosition: '50% 28%' },
+  { name: 'Stephen Bombeke', role: 'Secretaris / Trainer', photo: '/Images/The_Crew/stephen_B.jpeg', objectPosition: '50% 22%' },
+  { name: 'Tristan Van Valckenborgh', role: 'Materiaalmeester / Trainer', photo: '/Images/The_Crew/tristan_v.jpeg', objectPosition: '50% 48%' },
+  { name: 'Ilana Du Bois', role: 'Content Creator / Trainer', photo: '/Images/The_Crew/ilana_db.jpeg', objectPosition: '50% 35%' },
+  { name: 'Cedric Philipin', role: 'Trainer', photo: '/Images/The_Crew/cedric_ph.jpg', objectPosition: '50% 22%' },
 ]
 
 // Add canonical tag for SEO
@@ -169,10 +176,12 @@ onMounted(() => {
   flex-direction: column;
   gap: 0.75rem;
   height: 100%;
+  min-width: 0;
   padding: 0.75rem;
 }
 
 .crew-photo {
+  position: relative;
   aspect-ratio: 1;
   width: 100%;
   max-width: 10rem;
@@ -190,9 +199,17 @@ onMounted(() => {
 }
 
 .crew-photo img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
+}
+
+.crew-card h3,
+.crew-card p {
+  overflow-wrap: anywhere;
 }
 
 @media (min-width: 640px) {

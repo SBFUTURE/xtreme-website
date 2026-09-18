@@ -16,6 +16,10 @@
       <div class="w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></div>
       <span class="text-gray-200 font-medium">Evenement</span>
     </div>
+    <div class="flex items-center gap-2">
+      <div class="w-4 h-4 bg-gradient-to-r from-red-500 to-rose-600 rounded-full"></div>
+      <span class="text-gray-200 font-medium">Kerstmarkt</span>
+    </div>
   </div>
 </template>
 
