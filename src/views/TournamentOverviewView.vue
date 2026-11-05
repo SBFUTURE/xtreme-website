@@ -1,7 +1,7 @@
 <template>
   <main class="min-h-screen bg-xtreme-gradient py-6 md:py-8">
     <div class="max-w-5xl mx-auto px-6">
-       <ComingSoonView />
+      <TournamentOverview />
       <div class="mt-4 mb-8 md:mt-5">
         <div class="ice-card p-5 md:p-7">
           <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import ComingSoonView from './ComingSoonView.vue'
+import TournamentOverview from '@/components/TournamentOverview.vue'
 </script>
 
 <style scoped>

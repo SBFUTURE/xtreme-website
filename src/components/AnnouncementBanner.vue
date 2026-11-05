@@ -9,7 +9,7 @@
             <span class="mx-1 md:mx-2">•</span>
             <span class="text-black">XTREME NIGHT 7</span>
             <span class="mx-1 md:mx-2">•</span>
-            <span class="text-red-600">20 Maart 2027</span>
+            <span class="text-red-600">19-20 Maart 2027</span>
           </p>
           <p class="text-xs md:text-sm font-medium mt-0.5 md:mt-1 text-gray-800 hidden sm:block">
             Mis de meest spectaculaire ijsshow van het jaar niet! Tickets binnenkort beschikbaar.

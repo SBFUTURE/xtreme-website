@@ -55,9 +55,9 @@
               <ul class="list-disc list-inside mt-2 text-gray-300">
                 <li>De beslissing van de scheidsrechter met betrekking tot gemiste obstakels of start-/stoptijden is definitief.</li>
                 <li>Deelnemers moeten te allen tijde controle behouden om botsingen met anderen of de boarding te vermijden.</li>
-                <li>Iedereen mag het parcours 1 keer uitvoeren om te oefenen.</li>
+                <li>Iedereen krijgt de kans om het parcours 1 à 2 keer te oefenen, afhankelijk van de beschikbare tijd.</li>
                 <li>Iedereen heeft 1 kans om een tijd neer te zetten (kwalificatie). De kwalificatie bepaalt de startplaats tijdens de race.</li>
-                <li>De race is met 3 deelnemers tegelijkertijd; de eerste 2 gaan door naar de volgende ronde.</li>
+                <li>De heats worden ingedeeld afhankelijk van het aantal deelnemers.</li>
                 <li>Fair Play: bochten afsnijden of obstakels overslaan kan leiden tot diskwalificatie.</li>
                 <li>De tegenstander hinderen door te duwen, trekken, … kan leiden tot diskwalificatie.</li>
                 <li>Alle obstakels moeten worden uitgevoerd (-16 hoeven de schans niet te nemen).</li>
@@ -69,6 +69,14 @@
               <ul class="list-disc list-inside mt-2 text-gray-300">
                 <li>Elke deelnemer heeft 2 pogingen.</li>
                 <li>Je mag een afstand overslaan door een kruis te geven; faal je daarna, dan telt de laatst succesvol afgelegde afstand.</li>
+                <li>Beginafstand per categorie:
+                  <ul class="list-[circle] list-inside ml-5">
+                    <li>Mannen +16: 4 bananendozen (1,2 m)</li>
+                    <li>Vrouwen +16: 3 bananendozen (1 m)</li>
+                    <li>Mannen -16: 2 groene paaltjes (40 cm)</li>
+                    <li>Vrouwen -16: 1 groen paaltje (20 cm)</li>
+                  </ul>
+                </li>
                 <li>De schaatsen moeten voorbij de dozen landen; diagonale sprongen zijn ongeldig.</li>
                 <li>De sprong is ongeldig als er dozen worden geraakt.</li>
                 <li>Bij de landing moeten de schaatsen als eerste het ijs raken.</li>
@@ -81,6 +89,14 @@
               <ul class="list-disc list-inside mt-2 text-gray-300">
                 <li>Elke deelnemer heeft 2 pogingen per hoogte.</li>
                 <li>Je mag een hoogte overslaan door een kruis te geven; faal je daarna, dan wordt de laatst geslaagde hoogte geregistreerd.</li>
+                <li>Beginhoogtes per categorie:
+                  <ul class="list-[circle] list-inside ml-5">
+                    <li>Mannen +16: 1,20 m</li>
+                    <li>Vrouwen +16: 90 cm</li>
+                    <li>Mannen -16: 70 cm</li>
+                    <li>Vrouwen -16: 60 cm</li>
+                  </ul>
+                </li>
                 <li>Bij de landing moeten de schaatsen als eerste het ijs raken.</li>
                 <li>Bij gelijkspel wordt de laatst gehaalde hoogte gesprongen tot er iemand faalt.</li>
               </ul>
@@ -91,6 +107,14 @@
               <ul class="list-disc list-inside mt-2 text-gray-300">
                 <li>Elke deelnemer heeft 2 pogingen per hoogte.</li>
                 <li>Je mag een hoogte overslaan door een kruis te geven; faal je daarna, dan wordt de laatst geslaagde hoogte geregistreerd.</li>
+                <li>Beginhoogtes per categorie:
+                  <ul class="list-[circle] list-inside ml-5">
+                    <li>Mannen +16: 50 cm</li>
+                    <li>Vrouwen +16: 40 cm</li>
+                    <li>Mannen -16: 30 cm</li>
+                    <li>Vrouwen -16: 20 cm</li>
+                  </ul>
+                </li>
                 <li>Bij de landing moeten de schaatsen als eerste het ijs raken.</li>
                 <li>Bij gelijkspel wordt de laatst gehaalde hoogte gesprongen tot er iemand faalt.</li>
               </ul>
